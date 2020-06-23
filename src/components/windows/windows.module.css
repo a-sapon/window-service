@@ -1,0 +1,30 @@
+/* #99ccff */
+
+.window {
+  width: 220px;
+  height: 320px;
+  position: relative;
+}
+
+.innerWindow {
+  width: 70%;
+  height: 83%;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  overflow: hidden;
+  background-color: #99ccff;
+}
+
+.innerWindow::after {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 100%;
+  background-image:linear-gradient(0deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.4) 100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 80% -45%;
+  transform: rotate(20deg);
+}

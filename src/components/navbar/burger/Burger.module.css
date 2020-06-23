@@ -1,0 +1,68 @@
+@import '../../../styles/vars.css';
+
+.burgerIcon,
+.closeIcon {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+}
+
+.burgerIconLine {
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 6px;
+  background-color: var(--dark-blue);
+  position: absolute;
+  right: 0;
+  transition: transform 200ms ease-out;
+}
+.burgerIconLine:nth-child(1) {
+  top: 0;
+}
+.burgerIconLine:nth-child(2) {
+  top: 6px;
+}
+.burgerIconLine:nth-child(3) {
+  top: 12px;
+}
+
+.closeIcon .burgerIconLine:nth-child(1) {
+  transform: rotate(135deg);
+  top: 6px;
+}
+.closeIcon .burgerIconLine:nth-child(2) {
+  opacity: 0;
+  margin-right: -60px;
+}
+.closeIcon .burgerIconLine:nth-child(3) {
+  transform: rotate(-135deg);
+  top: 6px;
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.modalList {
+  text-align: right;
+  font-size: 14px;
+  padding-top: 40px;
+}
+
+.modalListItem {
+  color: var(--text-color);
+  padding: 10px 30px;
+  text-transform: none;
+}
+
+.modalListItem:hover {
+  color: var(--dark-blue);
+}

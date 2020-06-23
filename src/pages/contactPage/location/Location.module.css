@@ -1,0 +1,18 @@
+@import '../../../styles/vars.css';
+
+.locationLink {
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.locationLink:hover {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 768px) {
+  .locationText {
+    font-size: 14px;
+  }
+}

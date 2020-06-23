@@ -1,0 +1,120 @@
+@import '../../styles/vars.css';
+
+.hdrWrapper {
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    ),
+    url(../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.hdr {
+  margin: 0 auto;
+  height: 200px;
+  color: var(--text-color);
+  line-height: 46px;
+}
+
+.hdrTitle {
+  font-weight: 800;
+  font-size: 22px;
+  padding-top: 50px;
+}
+
+.hdrText {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.hdrText::before {
+  content: '';
+  display: inline-block;
+  height: 2px;
+  width: 30px;
+  background-color: var(--dark-blue);
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.hdrPriceBtn {
+  background-color: var(--dark-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1.1px;
+
+  /* for hover effects */
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: -120px -120px, 0 0;
+  background-image: linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0.0) 50%
+  );
+  background-size: 250% 250%, 100% 100%;
+  transition: background-position 0s ease;
+}
+
+.hdrPriceBtn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);;
+	transition: none;
+}
+.hdrPriceBtn:hover:after {
+  width: 120%;
+  background-color: rgba(255,255,255,0);
+	transition: all 0.4s ease-in-out;
+}
+.hdrPriceBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.hdrPriceBtn:focus {
+  outline: none;
+}
+
+/* .mainSection {
+  margin: 0 auto;
+  background-color: #03020a;
+} */
+
+@media (min-width: 768px) {
+  .hdr {
+    height: 590px;
+    line-height: 76px;
+    letter-spacing: 1.3px;
+  }
+
+  .hdrTitle {
+    font-size: 38px;
+    padding-top: 120px;
+  }
+
+  .hdrText {
+    font-size: 21px;
+  }
+
+  .hdrText::before {
+    width: 40px;
+  }
+
+  .hdrPriceBtn {
+    font-size: 21px;
+  }
+}

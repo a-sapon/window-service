@@ -1,0 +1,107 @@
+@import '../../styles/vars.css';
+
+.contactWrapper {
+  /* min-height: 100vh; */
+  position: relative;
+  overflow: hidden;
+}
+
+.contactTitle {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 800;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contactTitle::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  background-color: var(--dark-blue);
+  margin: 20px auto;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  margin-bottom: 36px;
+}
+
+.contactListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+.contactListItem:last-child {
+  margin-bottom: 0;
+}
+
+.contactIcon {
+  width: 30px;
+  height: 30px;
+  fill: var(--dark-blue);
+  margin-right: 20px;
+}
+
+/* .phoneNum,
+.email {
+  color: #ffffff;
+} */
+
+@media (max-height: 414px) {
+  .contactWrapper {
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contactTitle {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .contactList {
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+
+  .contactListItem {
+    flex-direction: column;
+    margin-bottom: 0;
+    width: 222px;
+  }
+
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contactTitle {
+    font-size: 36px;
+  }
+
+  .contactList {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .contactTitle {
+    padding-top: 140px;
+  }
+
+  .contactList {
+    font-size: 20px;
+    margin-bottom: 140px;
+  }
+}
