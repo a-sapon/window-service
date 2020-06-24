@@ -44,8 +44,8 @@
 
   .windowTypeList {
     flex-direction: column;
-    margin-bottom: 0;
-    height: 224px;
+    margin: 0 20px 0 0;
+    height: 256px;
   }
 
   .windowTypeListItem {

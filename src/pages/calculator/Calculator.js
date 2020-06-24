@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Windows from './productTypes/Windows';
-import Doors from './productTypes/Doors';
-import Balconies from './productTypes/Balconies';
-import BalconyDoors from './productTypes/BalconyDoors';
+import Windows from './windowTypes/Windows';
+import Doors from './windowTypes/Doors';
+import Balconies from './windowTypes/Balconies';
+import BalconyDoors from './windowTypes/BalconyDoors';
 import styles from './Calculator.module.css';
 import '../../components/App.css';
 

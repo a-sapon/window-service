@@ -6,6 +6,8 @@ const SingleWindow = () => (
     <div className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
+        width='86'
+        height='120'
         viewBox='0 0 800 1200'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
