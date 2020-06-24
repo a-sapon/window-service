@@ -1,9 +1,8 @@
 import React, { useState, useEffect, createContext } from 'react';
-// import SingleLeftWindow from './windows/SingleLeftWindow';
-import Navbar from './navbar/Navbar';
 import './App.css';
 import { Home } from '../pages/homePage/Home';
 import { Contact } from '../pages/contactPage/Contact';
+import Calculator from '../pages/calculator/Calculator';
 
 export const ScreenContext = createContext();
 
@@ -20,8 +19,8 @@ export const App = () => {
 
   return (
     <ScreenContext.Provider value={isMobile}>
-      <Navbar />
       <Home />
+      <Calculator />
       <Contact />
       <div className='App'></div>
     </ScreenContext.Provider>

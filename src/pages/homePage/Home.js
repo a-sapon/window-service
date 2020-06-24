@@ -1,18 +1,19 @@
 import React from 'react';
+import Navbar from '../../components/navbar/Navbar';
 import styles from './Home.module.css';
 import '../../components/App.css';
 
 export const Home = () => (
   <>
-    <div className={styles.hdrWrapper}>
-      <header className={`container ${styles.hdr}`}>
-        <h1 className={styles.hdrTitle}>Качественные окна</h1>
+    <header className={styles.hdrWrapper}>
+      <Navbar />
+      <div className={`container ${styles.hdr}`}>
+        <h1 id='home' className={styles.hdrTitle}>Качественные окна</h1>
         <div className={styles.hdrText}>по лучшим ценам</div>
-        <button type='button' className={styles.hdrPriceBtn}>
+        <a href='#calculator' className={styles.hdrPriceBtn}>
           Расчитать цену бесплатно
-        </button>
-      </header>
-      <main className={styles.mainSection}></main>
-    </div>
+        </a>
+      </div>
+    </header>
   </>
 );

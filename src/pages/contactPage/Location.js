@@ -1,9 +1,7 @@
 import React from 'react';
-import styles from './Location.module.css';
-import contactStyles from '../Contact.module.css';
+import contactStyles from './Contact.module.css';
 
 export const Location = () => {
-  // const isMobile = useContext(ScreenContext);
   return (
     <>
       <svg viewBox='0 0 512 512' className={contactStyles.contactIcon}>
@@ -37,7 +35,7 @@ export const Location = () => {
         href='https://goo.gl/maps/rLykheEdUR6xpZVB6'
         target='_blank'
         rel='noopener noreferrer'
-        className={styles.locationLink}
+        className={contactStyles.locationLink}
       >
         Киев, Украина
       </a>

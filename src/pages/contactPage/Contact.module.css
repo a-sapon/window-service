@@ -1,9 +1,7 @@
 @import '../../styles/vars.css';
 
 .contactWrapper {
-  /* min-height: 100vh; */
   position: relative;
-  overflow: hidden;
 }
 
 .contactTitle {
@@ -48,10 +46,16 @@
   margin-right: 20px;
 }
 
-/* .phoneNum,
-.email {
-  color: #ffffff;
-} */
+.locationLink {
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.locationLink:hover {
+  color: var(--dark-blue);
+}
 
 @media (max-height: 414px) {
   .contactWrapper {
@@ -67,7 +71,7 @@
 
   .contactList {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 14px;
     margin-bottom: 50px;
   }
@@ -75,13 +79,17 @@
   .contactListItem {
     flex-direction: column;
     margin-bottom: 0;
-    width: 222px;
+    /* width: 222px; */
   }
 
   .contactIcon {
     width: 40px;
     height: 40px;
     margin: 0 0 20px 0;
+  }
+
+  .locationText {
+    font-size: 14px;
   }
 }
 

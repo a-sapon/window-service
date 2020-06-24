@@ -9,12 +9,12 @@
     url(../../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
 }
 
 .hdr {
   margin: 0 auto;
-  height: 200px;
+  height: 210px;
   color: var(--text-color);
   line-height: 46px;
 }
@@ -41,10 +41,15 @@
 }
 
 .hdrPriceBtn {
+  width: 230px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--dark-blue);
   color: #ffffff;
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 10px 20px;
   font-size: 13px;
   font-weight: 500;
@@ -89,21 +94,20 @@
   outline: none;
 }
 
-/* .mainSection {
-  margin: 0 auto;
-  background-color: #03020a;
-} */
-
 @media (min-width: 768px) {
+  .hdrWrapper {
+    margin: 0 auto 30px auto;
+  }
+
   .hdr {
-    height: 590px;
+    height: 380px;
     line-height: 76px;
     letter-spacing: 1.3px;
   }
 
   .hdrTitle {
     font-size: 38px;
-    padding-top: 120px;
+    padding-top: 90px;
   }
 
   .hdrText {
@@ -116,5 +120,7 @@
 
   .hdrPriceBtn {
     font-size: 21px;
+    width: 340px;
+    height: 50px;
   }
 }
