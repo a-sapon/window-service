@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './windows.module.css';
+import styles from './window-svg.module.css';
 
-const DoubleThirdWindow = () => (
-  <div className={styles.windowWrapper}>
-    <div className={styles.window}>
+const DoubleThirdWindow = ({ onHandleClick }) => (
+  <div onClick={onHandleClick} className={styles.windowWrapper}>
+    <div data-type='DoubleThirdWindow' className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
         width='140'
@@ -11,6 +11,7 @@ const DoubleThirdWindow = () => (
         viewBox='0 0 1500 1200'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
+        
       >
         <g>
           <polygon

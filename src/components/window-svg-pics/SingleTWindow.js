@@ -1,122 +1,157 @@
 import React, { useState } from 'react';
-import styles from './windows.module.css';
+import styles from './window-svg.module.css';
 
-const SingleThirdWindowSide = () => {
-  const [value, setValue] = useState('left-3');
+const SingleTWindow = ({ onHandleClick }) => {
+  const [value, setValue] = useState('left-7');
 
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  const flip = value === 'left-3' ? false : true;
+  const flip = value === 'left-7' ? false : true;
 
   return (
-    <div className={styles.windowWrapper}>
-      <div className={styles.window}>
+    <div onClick={onHandleClick} className={styles.windowWrapper}>
+      <div data-type='SingleTWindow' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
-          width='140'
+          width='100'
           height='120'
-          viewBox='0 0 1500 1200'
+          viewBox='0 0 1200 1560'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
           className={flip ? styles.flipped : 'unflipped'}
+          
         >
           <g>
             <polygon
-              points='0 0 48 48 48 1152 0 1200'
+              points='0 0 48 48 48 1512 0 1560'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='0 0 48 48 1452 48 1500 0'
+              points='0 0 48 48 1152 48 1200 0'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='1500 0 1452 48 1452 1152 1500 1200'
+              points='1200 0 1152 48 1152 1512 1200 1560'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='0 1200 48 1152 1452 1152 1500 1200'
+              points='0 1560 48 1512 1152 1512 1200 1560'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
           </g>
-
           <rect
-            x='982'
-            y='48'
+            x='48'
+            y='502'
             rx='0'
             ry='0'
-            width='36'
-            height='1104'
+            width='1104'
+            height='36'
             stroke='#0d0d0d'
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
-
-          <g>
-            <polygon
-              points='48 48 68 68 68 1132 48 1152'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='48 48 68 68 962 68 982 48'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='982 48 962 68 962 1132 982 1152'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='48 1152 68 1132 962 1132 982 1152'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-          </g>
-          <g>
-            <polygon
-              points='1011 40 1071 100 1071 1100 1011 1160'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='1011 40 1071 100 1401 100 1461 40'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='1461 40 1401 100 1401 1100 1461 1160'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='1011 1160 1071 1100 1401 1100 1461 1160'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-          </g>
-
           <rect
-            x='1032'
-            y='570'
+            x='582'
+            y='538'
+            rx='0'
+            ry='0'
+            width='36'
+            height='974'
+            stroke='#0d0d0d'
+            fill='#f2f2f2'
+            strokeWidth='1'
+          ></rect>
+          <g>
+            <polygon
+              points='48 48 68 68 68 482 48 502'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='48 48 68 68 1132 68 1152 48'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='1152 48 1132 68 1132 482 1152 502'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='48 502 68 482 1132 482 1152 502'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+          </g>
+          <g>
+            <polygon
+              points='48 538 68 558 68 1492 48 1512'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='48 538 68 558 562 558 582 538'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='582 538 562 558 562 1492 582 1512'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='48 1512 68 1492 562 1492 582 1512'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+          </g>
+          <g>
+            <polygon
+              points='611 530 671 590 671 1460 611 1520'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='611 530 671 590 1101 590 1161 530'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='1161 530 1101 590 1101 1460 1161 1520'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+            <polygon
+              points='611 1520 671 1460 1101 1460 1161 1520'
+              stroke='#0d0d0d'
+              fill='#f2f2f2'
+              strokeWidth='1'
+            ></polygon>
+          </g>
+          <rect
+            x='632'
+            y='995'
             rx='14'
             ry='14'
             width='28'
@@ -126,8 +161,8 @@ const SingleThirdWindowSide = () => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='1036'
-            y='590'
+            x='636'
+            y='1015'
             rx='10'
             ry='10'
             width='20'
@@ -136,10 +171,9 @@ const SingleThirdWindowSide = () => {
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
-
           <rect
-            x='1461'
-            y='40'
+            x='1161'
+            y='530'
             rx='2'
             ry='2'
             width='15'
@@ -149,8 +183,8 @@ const SingleThirdWindowSide = () => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='1461'
-            y='55'
+            x='1161'
+            y='545'
             rx='2'
             ry='2'
             width='15'
@@ -159,10 +193,9 @@ const SingleThirdWindowSide = () => {
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
-
           <rect
-            x='1461'
-            y='1145'
+            x='1161'
+            y='1505'
             rx='2'
             ry='2'
             width='15'
@@ -172,8 +205,8 @@ const SingleThirdWindowSide = () => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='1461'
-            y='1030'
+            x='1161'
+            y='1390'
             rx='2'
             ry='2'
             width='15'
@@ -186,24 +219,24 @@ const SingleThirdWindowSide = () => {
       </div>
 
       <div className={styles.radioBtns}>
-        <label htmlFor='left-3'>
+        <label htmlFor='left-7'>
           <input
             type='radio'
-            id='left-3'
-            name='knob-3'
-            value='left-3'
-            checked={value === 'left-3'}
+            id='left-7'
+            name='knob-7'
+            value='left-7'
+            checked={value === 'left-7'}
             onChange={handleChange}
           ></input>
           Ручка слева
         </label>
-        <label htmlFor='right-3'>
+        <label htmlFor='right-7'>
           <input
             type='radio'
-            id='right-3'
-            name='knob-3'
-            value='right-3'
-            checked={value === 'right-3'}
+            id='right-7'
+            name='knob-7'
+            value='right-7'
+            checked={value === 'right-7'}
             onChange={handleChange}
           ></input>
           Ручка справа
@@ -213,4 +246,4 @@ const SingleThirdWindowSide = () => {
   );
 };
 
-export default SingleThirdWindowSide;
+export default SingleTWindow;

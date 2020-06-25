@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import styles from './windows.module.css';
+import styles from './window-svg.module.css';
 
-const SingleThirdWindowCenter = () => {
-  const [value, setValue] = useState('left-4');
+const SingleThirdWindowSide = ({ onHandleClick }) => {
+  const [value, setValue] = useState('left-3');
 
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  const flip = value === 'left-4' ? false : true;
+  const flip = value === 'left-3' ? false : true;
 
   return (
-    <div className={styles.windowWrapper}>
-      <div className={styles.window}>
+    <div onClick={onHandleClick} className={styles.windowWrapper}>
+      <div data-type='SingleThirdWindowSide' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
           width='140'
@@ -21,6 +21,7 @@ const SingleThirdWindowCenter = () => {
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
           className={flip ? styles.flipped : 'unflipped'}
+          
         >
           <g>
             <polygon
@@ -48,17 +49,7 @@ const SingleThirdWindowCenter = () => {
               strokeWidth='1'
             ></polygon>
           </g>
-          <rect
-            x='482'
-            y='48'
-            rx='0'
-            ry='0'
-            width='36'
-            height='1104'
-            stroke='#0d0d0d'
-            fill='#f2f2f2'
-            strokeWidth='1'
-          ></rect>
+
           <rect
             x='982'
             y='48'
@@ -70,6 +61,7 @@ const SingleThirdWindowCenter = () => {
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
+
           <g>
             <polygon
               points='48 48 68 68 68 1132 48 1152'
@@ -78,19 +70,19 @@ const SingleThirdWindowCenter = () => {
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='48 48 68 68 462 68 482 48'
+              points='48 48 68 68 962 68 982 48'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='482 48 462 68 462 1132 482 1152'
+              points='982 48 962 68 962 1132 982 1152'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='48 1152 68 1132 462 1132 482 1152'
+              points='48 1152 68 1132 962 1132 982 1152'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -98,32 +90,33 @@ const SingleThirdWindowCenter = () => {
           </g>
           <g>
             <polygon
-              points='508 40 568 100 568 1100 508 1160'
+              points='1011 40 1071 100 1071 1100 1011 1160'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='508 40 568 100 928 100 988 40'
+              points='1011 40 1071 100 1401 100 1461 40'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='988 40 928 100 928 1100 988 1160'
+              points='1461 40 1401 100 1401 1100 1461 1160'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='508 1160 568 1100 928 1100 988 1160'
+              points='1011 1160 1071 1100 1401 1100 1461 1160'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
           </g>
+
           <rect
-            x='529'
+            x='1032'
             y='570'
             rx='14'
             ry='14'
@@ -134,7 +127,7 @@ const SingleThirdWindowCenter = () => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='533'
+            x='1036'
             y='590'
             rx='10'
             ry='10'
@@ -144,8 +137,9 @@ const SingleThirdWindowCenter = () => {
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
+
           <rect
-            x='988'
+            x='1461'
             y='40'
             rx='2'
             ry='2'
@@ -156,7 +150,7 @@ const SingleThirdWindowCenter = () => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='988'
+            x='1461'
             y='55'
             rx='2'
             ry='2'
@@ -166,8 +160,9 @@ const SingleThirdWindowCenter = () => {
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
+
           <rect
-            x='988'
+            x='1461'
             y='1145'
             rx='2'
             ry='2'
@@ -178,7 +173,7 @@ const SingleThirdWindowCenter = () => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='988'
+            x='1461'
             y='1030'
             rx='2'
             ry='2'
@@ -188,54 +183,28 @@ const SingleThirdWindowCenter = () => {
             fill='#f2f2f2'
             strokeWidth='1'
           ></rect>
-          <g>
-            <polygon
-              points='1018 48 1038 68 1038 1132 1018 1152'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='1018 48 1038 68 1432 68 1452 48'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='1452 48 1432 68 1432 1132 1452 1152'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='1018 1152 1038 1132 1432 1132 1452 1152'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-          </g>
         </svg>
       </div>
 
       <div className={styles.radioBtns}>
-        <label htmlFor='left-4'>
+        <label htmlFor='left-3'>
           <input
             type='radio'
-            id='left-4'
-            name='knob-4'
-            value='left-4'
-            checked={value === 'left-4'}
+            id='left-3'
+            name='knob-3'
+            value='left-3'
+            checked={value === 'left-3'}
             onChange={handleChange}
           ></input>
           Ручка слева
         </label>
-        <label htmlFor='right-4'>
+        <label htmlFor='right-3'>
           <input
             type='radio'
-            id='right-4'
-            name='knob-4'
-            value='right-4'
-            checked={value === 'right-4'}
+            id='right-3'
+            name='knob-3'
+            value='right-3'
+            checked={value === 'right-3'}
             onChange={handleChange}
           ></input>
           Ручка справа
@@ -245,4 +214,4 @@ const SingleThirdWindowCenter = () => {
   );
 };
 
-export default SingleThirdWindowCenter;
+export default SingleThirdWindowSide;

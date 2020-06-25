@@ -1,5 +1,9 @@
 @import '../../styles/vars.css';
 
+.calcForm {
+  margin-bottom: 20px;
+}
+
 .calcTitle {
   font-size: 22px;
   color: var(--text-color);
@@ -7,59 +11,170 @@
   margin-bottom: 16px;
 }
 
-.windowTypeList {
-  font-size: 13px;
+.windowSizeBox {
+  padding: 20px;
+  font-size: 12px;
+  font-weight: 800;
   background-color: var(--light-grey);
-  cursor: pointer;
-  display: flex;
-  margin-bottom: 10px;
-  height: 52px;
-  text-align: center;
+  border: 1px solid #d9d9d9;
+  color: var(--text-color);
+  margin-bottom: 20px;
 }
 
-.windowTypeListItem {
+.windowSizeTitle {
+  padding-bottom: 10px;
+}
+
+.windowSizeInputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.windowSizeBox label {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  position: relative;
+  max-width: 40%;
+}
+
+.inputsWrapper input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  padding: 4px 10px;
+  outline: none;
+}
+
+.inputsWrapper input:focus {
+  box-shadow: 1px 1px 4px 1px rgba(140, 140, 140, 0.35);
+}
+
+.inputsWrapper::after {
+  content: 'мм';
+  font-size: 11px;
+  font-weight: 400;
+  font-family: cursive;
+  color: #808080;
+  position: absolute;
+  right: 10px;
+  bottom: -15px;
+  transform: translateY(-50%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.getPriceBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 10px;
+  background-color: var(--dark-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1.1px;
+  margin: 0 auto;
+
+  /* hover effects */
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: -120px -120px, 0 0;
+  background-image: linear-gradient(
+    0 0,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.2) 37%,
+    rgba(255, 255, 255, 0.8) 45%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-size: 250% 250%, 100% 100%;
+  transition: background-position 0s ease;
 }
-.windowTypeListItem:hover {
-  background-color: var(--light-grey-hover);
+.getPriceBtn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: none;
+}
+.getPriceBtn:hover:after {
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.4s ease-in-out;
+}
+.getPriceBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.getPriceBtn:focus {
+  outline: none;
 }
 
-.windowTypeListItem.active {
-  background-color: #d9d9d9;
+@media (max-width: 768px) {
+  .windowSizeInputs {
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width: 768px) {
+  .calcForm {
+    margin-bottom: 30px;
+  }
+
   .calcTitle {
-    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 30px;
   }
 
-  .products {
-    display: flex;
+  .windowSizeBox {
+    max-width: 70%;
+    margin: 0 20px 20px auto;
+    font-size: 14px;
   }
 
-  .windowTypeList {
-    flex-direction: column;
-    margin: 0 20px 0 0;
-    height: 256px;
-  }
-
-  .windowTypeListItem {
-    padding: 20px;
+  .getPriceBtn {
+    font-size: 15px;
+    padding: 10px 24px;
   }
 }
 
 @media (min-width: 1200px) {
-  .windowTypeList {
-    font-size: 17px;
-    height: 400px;
+  .calcForm {
+    margin-bottom: 40px;
   }
 
-  .windowTypeListItem {
-    padding: 30px 20px;
+  .calcTitle {
+    font-size: 36px;
+  }
+
+  .windowSizeBox {
+    max-width: 50%;
+    margin: 0 auto 30px auto;
+  }
+
+  .windowSizeTitle {
+    padding-bottom: 20px;
+  }
+
+  .windowSizeBox label {
+    flex-direction: row;
+  }
+
+  .inputsWrapper input {
+    margin-left: 10px;
   }
 }

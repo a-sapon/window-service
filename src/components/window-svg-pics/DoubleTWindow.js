@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './windows.module.css';
+import styles from './window-svg.module.css';
 
-const DoubleTWindow = () => (
-  <div className={styles.windowWrapper}>
-    <div className={styles.window}>
+const DoubleTWindow = ({ onHandleClick }) => (
+  <div onClick={onHandleClick} className={styles.windowWrapper}>
+    <div data-type='DoubleTWindow' className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
         width='100'
@@ -11,6 +11,7 @@ const DoubleTWindow = () => (
         viewBox='0 0 1200 1560'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
+        
       >
         <g>
           <polygon

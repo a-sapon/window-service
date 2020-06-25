@@ -1,76 +1,47 @@
-import React, { useState } from 'react';
-import Windows from './windowTypes/Windows';
-import Doors from './windowTypes/Doors';
-import Balconies from './windowTypes/Balconies';
-import BalconyDoors from './windowTypes/BalconyDoors';
+import React from 'react';
 import styles from './Calculator.module.css';
 import '../../components/App.css';
+import WindowTypesSection from '../../components/windowTypesSection/WindowTypesSection';
 
 const Calculator = () => {
-  const [windows, openWindows] = useState(true);
-  const [doors, openDoors] = useState(false);
-  const [balconies, openBalconies] = useState(false);
-  const [balconyDoors, openBalconyDoors] = useState(false);
+  const handleChange = (e) => {
+    
+  }
 
-  const handleClick = (e) => {
-    switch (e.target.id) {
-      case 'windows':
-        openWindows(true);
-        openDoors(false);
-        openBalconies(false);
-        openBalconyDoors(false);
-        break;
-      case 'doors':
-        openDoors(true);
-        openWindows(false);
-        openBalconies(false);
-        openBalconyDoors(false);
-        break;
-      case 'balconies':
-        openBalconies(true);
-        openWindows(false);
-        openDoors(false);
-        openBalconyDoors(false);
-        break;
-      case 'balconyDoors':
-        openBalconyDoors(true);
-        openWindows(false);
-        openDoors(false);
-        openBalconies(false);
-        break;
-      default:
-        return;
-    }
+  const getPriceOnSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (
-    <main className={`${styles.calcSection} container`}>
-      <h2 id='calculator' className={styles.calcTitle}>Расчет стоимости пластиковых окон</h2>
-      <div className={styles.products}>
+    <main className='container'>
+      <form onSubmit={getPriceOnSubmit} className={styles.calcForm}>
+        <h2 id='calculator' className={styles.calcTitle}>
+          Расчет стоимости пластиковых окон
+        </h2>
+        <WindowTypesSection />
 
-        <ul onClick={handleClick} className={styles.windowTypeList}>
-          <li id='windows' className={windows ? `${styles.windowTypeListItem} ${styles.active}` : styles.windowTypeListItem}>
-            Окна
-          </li>
-          <li id='doors' className={doors ? `${styles.windowTypeListItem} ${styles.active}` : styles.windowTypeListItem}>
-            Входные двери
-          </li>
-          <li id='balconies' className={balconies ? `${styles.windowTypeListItem} ${styles.active}` : styles.windowTypeListItem}>
-            Балконы
-          </li>
-          <li id='balconyDoors' className={balconyDoors ? `${styles.windowTypeListItem} ${styles.active}` : styles.windowTypeListItem}>
-            Балконные двери
-          </li>
-        </ul>
-
-        <div className={styles.windowPics}>
-          {windows && <Windows />}
-          {doors && <Doors />}
-          {balconies && <Balconies />}
-          {balconyDoors && <BalconyDoors />}
+        <div className={styles.windowSizeBox}>
+          <h3 className={styles.windowSizeTitle}>Размер окна</h3>
+          <div className={styles.windowSizeInputs}>
+            <label>
+              Ширина
+              <span className={styles.inputsWrapper}>
+                <input onChange={handleChange} type='number'></input>
+              </span>
+            </label>
+            <label>
+              Высота
+              <span className={styles.inputsWrapper}>
+                <input onChange={handleChange} type='number'></input>
+              </span>
+            </label>
+          </div>
         </div>
 
-      </div>
+        <button type='submit' className={styles.getPriceBtn}>
+          Цена
+        </button>
+      </form>
     </main>
   );
 };

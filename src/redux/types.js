@@ -1,0 +1,3 @@
+export default {
+  SELECT_WINDOW_TYPE: 'SELECT_WINDOW_TYPE',
+};

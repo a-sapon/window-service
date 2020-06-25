@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './windows.module.css';
+import styles from './window-svg.module.css';
 
-const SingleWindow = () => (
-  <div className={styles.windowWrapper}>
-    <div className={styles.window}>
+const SingleWindow = ({ onHandleClick }) => (
+  <div onClick={onHandleClick} className={styles.windowWrapper}>
+    <div data-type='SingleWindow' className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
         width='86'
@@ -11,6 +11,7 @@ const SingleWindow = () => (
         viewBox='0 0 800 1200'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
+        
       >
         <g>
           <polygon
@@ -63,14 +64,6 @@ const SingleWindow = () => (
             stroke='#0d0d0d'
             fill='#f2f2f2'
             strokeWidth='1'
-          ></polygon>
-        </g>
-        <g>
-          <polygon
-            points='68 68 732 68 732 1132 68 1132'
-            stroke='#f2f2f2'
-            fill='transparent'
-            strokeWidth='6'
           ></polygon>
         </g>
       </svg>

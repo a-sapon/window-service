@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
-import styles from './windows.module.css';
+import styles from './window-svg.module.css';
 
-const HalfTWindow = () => {
-  const [value, setValue] = useState('left-6');
+const SingleWindowWithKnob = ({ onHandleClick }) => {
+  const [value, setValue] = useState('left-1');
 
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  const flip = value === 'left-6' ? false : true;
+  const flip = value === 'left-1' ? false : true;
 
   return (
-    <div className={styles.windowWrapper}>
-      <div className={styles.window}>
-        <div className={styles.innerWindow} style={{width: '86%'}}></div>
+    <div onClick={onHandleClick} className={styles.windowWrapper}>
+      <div data-type='SingleWindowWithKnob' className={styles.window}>
+        <div className={styles.innerWindow}></div>
         <svg
-          width='70'
+          width='80'
           height='120'
-          viewBox='0 0 800 1560'
+          viewBox='0 0 800 1200'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
           className={flip ? styles.flipped : 'unflipped'}
+          
         >
           <g>
             <polygon
-              points='0 0 48 48 48 1512 0 1560'
+              points='0 0 48 48 48 1152 0 1200'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -36,50 +37,13 @@ const HalfTWindow = () => {
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='800 0 752 48 752 1512 800 1560'
+              points='800 0 752 48 752 1152 800 1200'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='0 1560 48 1512 752 1512 800 1560'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-          </g>
-          <rect
-            x='48'
-            y='502'
-            rx='0'
-            ry='0'
-            width='704'
-            height='36'
-            stroke='#0d0d0d'
-            fill='#f2f2f2'
-            strokeWidth='1'
-          ></rect>
-          <g>
-            <polygon
-              points='48 48 68 68 68 482 48 502'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='48 48 68 68 732 68 752 48'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='752 48 732 68 732 482 752 502'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='48 502 68 482 732 482 752 502'
+              points='0 1200 48 1152 752 1152 800 1200'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -87,25 +51,25 @@ const HalfTWindow = () => {
           </g>
           <g>
             <polygon
-              points='40 530 100 590 100 1460 40 1520'
+              points='40 40 100 100 100 1100 40 1160'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='40 530 100 590 700 590 760 530'
+              points='40 40 100 100 700 100 760 40'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='760 530 700 590 700 1460 760 1520'
+              points='760 40 700 100 700 1100 760 1160'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='40 1520 100 1460 700 1460 760 1520'
+              points='40 1160 100 1100 700 1100 760 1160'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -113,7 +77,7 @@ const HalfTWindow = () => {
           </g>
           <rect
             x='61'
-            y='995'
+            y='570'
             rx='14'
             ry='14'
             width='28'
@@ -124,7 +88,7 @@ const HalfTWindow = () => {
           ></rect>
           <rect
             x='65'
-            y='1015'
+            y='590'
             rx='10'
             ry='10'
             width='20'
@@ -135,7 +99,7 @@ const HalfTWindow = () => {
           ></rect>
           <rect
             x='760'
-            y='530'
+            y='40'
             rx='2'
             ry='2'
             width='15'
@@ -146,7 +110,7 @@ const HalfTWindow = () => {
           ></rect>
           <rect
             x='760'
-            y='545'
+            y='55'
             rx='2'
             ry='2'
             width='15'
@@ -157,7 +121,7 @@ const HalfTWindow = () => {
           ></rect>
           <rect
             x='760'
-            y='1505'
+            y='1145'
             rx='2'
             ry='2'
             width='15'
@@ -168,7 +132,7 @@ const HalfTWindow = () => {
           ></rect>
           <rect
             x='760'
-            y='1390'
+            y='1030'
             rx='2'
             ry='2'
             width='15'
@@ -181,24 +145,24 @@ const HalfTWindow = () => {
       </div>
 
       <div className={styles.radioBtns}>
-        <label htmlFor='left-6'>
+        <label htmlFor='left-1'>
           <input
             type='radio'
-            id='left-6'
-            name='knob-6'
-            value='left-6'
-            checked={value === 'left-6'}
+            id='left-1'
+            name='knob-1'
+            value='left-1'
+            checked={value === 'left-1'}
             onChange={handleChange}
           ></input>
           Ручка слева
         </label>
-        <label htmlFor='right-6'>
+        <label htmlFor='right-1'>
           <input
             type='radio'
-            id='right-6'
-            name='knob-6'
-            value='right-6'
-            checked={value === 'right-6'}
+            id='right-1'
+            name='knob-1'
+            value='right-1'
+            checked={value === 'right-1'}
             onChange={handleChange}
           ></input>
           Ручка справа
@@ -208,4 +172,4 @@ const HalfTWindow = () => {
   );
 };
 
-export default HalfTWindow;
+export default SingleWindowWithKnob;
