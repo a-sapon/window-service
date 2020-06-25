@@ -84,7 +84,6 @@
   .contactListItem {
     flex-direction: column;
     margin-bottom: 0;
-    /* width: 222px; */
   }
 
   .contactIcon {
@@ -99,10 +98,6 @@
 }
 
 @media (min-width: 1200px) {
-  .contactTitle {
-    font-size: 36px;
-  }
-
   .contactList {
     font-size: 16px;
   }
@@ -114,7 +109,7 @@
   }
 
   .contactList {
-    font-size: 20px;
+    font-size: 16px;
     padding-bottom: 140px;
   }
 }

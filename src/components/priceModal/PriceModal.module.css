@@ -1,0 +1,58 @@
+@import '../../styles/vars.css';
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.modal {
+  padding: 40px 24px 24px 24px;
+  border-radius: 4px;
+  max-width: 690px;
+  width: 90%;
+  min-height: 320px;
+  background-color: #ffffff;
+  color: var(--text-color);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px, 1px, -1px rgba(0, 0, 0, 0.12);
+  position: relative;
+  line-height: 24px;
+}
+
+.price {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 17px;
+}
+
+.priceText {
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    max-width: 970px;
+    padding: 40px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .priceText {
+    max-width: 56%;
+    font-size: 20px;
+    line-height: 36px;
+    margin: 0 auto 40px auto;
+  }
+}

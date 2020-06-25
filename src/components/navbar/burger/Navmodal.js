@@ -11,7 +11,12 @@ export const Navmodal = () => (
       </li>
       <li>
         <a href='#calculator' className={styles.modalListItem}>
-          Расчитать стоимость
+          Стоимость
+        </a>
+      </li>
+      <li>
+        <a href='#request' className={styles.modalListItem}>
+          Оставить заявку
         </a>
       </li>
       <li>

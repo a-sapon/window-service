@@ -56,26 +56,20 @@ class Navbar extends Component {
               ) : (
                 <ul className={styles.navList}>
                   <li className={styles.navListItem}>
-                    <a
-                      href='#home'
-                      
-                    >
-                      Главная
+                    <a href='#home'>Главная</a>
+                  </li>
+                  <li>
+                    <a href='#calculator' className={styles.navListItem}>
+                      Стоимость
                     </a>
                   </li>
                   <li>
-                    <a
-                      href='#calculator'
-                      className={styles.navListItem}
-                    >
-                      Расчитать стоимость
+                    <a href='#request' className={styles.navListItem}>
+                      Оставить заявку
                     </a>
                   </li>
                   <li>
-                    <a
-                      href='#contact'
-                      className={styles.navListItem}
-                    >
+                    <a href='#contact' className={styles.navListItem}>
                       Контакты
                     </a>
                   </li>
