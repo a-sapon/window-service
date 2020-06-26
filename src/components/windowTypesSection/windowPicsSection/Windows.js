@@ -12,9 +12,9 @@ import SingleTWindow from '../../window-svg-pics/SingleTWindow';
 import DoubleTWindow from '../../window-svg-pics/DoubleTWindow';
 import styles from './windowPicsSection.module.css';
 import { connect } from 'react-redux';
-import { selectWindowType } from '../../../redux/actionCreators';
+import { selectWindowType, setSashesNumber } from '../../../redux/actionCreators';
 
-const Windows = ({ selectWindowType }) => {
+const Windows = ({ selectWindowType, setSashesNumber }) => {
 
   const handleClick = (e) => {
     const selected = document.querySelector(`.${styles.selected}`);
@@ -25,6 +25,7 @@ const Windows = ({ selectWindowType }) => {
 
     clickedWindow.classList.add(styles.selected);
     selectWindowType(clickedWindow.dataset.type);
+    setSashesNumber(clickedWindow.dataset.sash)
   };
 
   return (
@@ -66,4 +67,4 @@ const Windows = ({ selectWindowType }) => {
   );
 };
 
-export default connect(null, { selectWindowType })(Windows);
+export default connect(null, { selectWindowType, setSashesNumber })(Windows);

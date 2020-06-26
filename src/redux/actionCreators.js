@@ -1,16 +1,42 @@
 import Type from './types';
 
-export const selectWindowType = type => ({
+export const selectWindowType = (type) => ({
   type: Type.SELECT_WINDOW_TYPE,
-  payload: type
+  payload: type,
 });
 
-export const setWindowWidth = width => ({
+export const setWindowWidth = (width) => ({
   type: Type.SET_WINDOW_WIDTH,
-  payload: width
+  payload: width,
 });
 
-export const setWindowHeight = height => ({
+export const setWindowHeight = (height) => ({
   type: Type.SET_WINDOW_HEIGHT,
-  payload: height
+  payload: height,
+});
+
+export const setSashesNumber = (num) => ({
+  type: Type.SET_SASHES_NUMBER,
+  payload: Number(num),
+});
+
+export const setPrice = (price) => ({
+  type: Type.SET_PRICE,
+  payload: price,
+});
+
+export const openPriceModal = () => ({
+  type: Type.OPEN_PRICE_MODAL,
+});
+
+export const closePriceModal = () => ({
+  type: Type.CLOSE_PRICE_MODAL,
+});
+
+export const openResponseModal = () => ({
+  type: Type.OPEN_RESPONSE_MODAL,
+});
+
+export const closeResponseModal = () => ({
+  type: Type.CLOSE_RESPONSE_MODAL,
 });

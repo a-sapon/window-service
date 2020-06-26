@@ -2,15 +2,28 @@ import React, { useState } from 'react';
 import styles from './Calculator.module.css';
 import '../../components/App.css';
 import WindowTypesSection from '../../components/windowTypesSection/WindowTypesSection';
-import { setWindowWidth, setWindowHeight } from '../../redux/actionCreators';
+import {
+  setWindowWidth,
+  setWindowHeight,
+  openPriceModal,
+} from '../../redux/actionCreators';
 import { connect } from 'react-redux';
 import PriceModal from '../../components/priceModal/PriceModal';
 import PrimaryBtn from '../../components/primaryBtn/PrimaryBtn';
+import { CSSTransition } from 'react-transition-group';
+import animations from '../../styles/modalAnimation.module.css';
+import ResponseModal from '../../components/priceModal/ResponseModal';
 
-const Calculator = ({ setWindowWidth, setWindowHeight, windowType }) => {
+const Calculator = ({
+  setWindowWidth,
+  setWindowHeight,
+  sashes,
+  priceModal,
+  openPriceModal,
+  formResponseModal,
+}) => {
   const [width, setWidth] = useState(1400);
   const [height, setHeight] = useState(1300);
-  const [modal, openModal] = useState(false);
   const [price, setPrice] = useState(0);
 
   const handleWidth = (e) => {
@@ -23,22 +36,21 @@ const Calculator = ({ setWindowWidth, setWindowHeight, windowType }) => {
 
   const getPriceOnSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      `windowType: ${windowType}, width: ${width}, height: ${height}`
-    );
+    if (width < 400 || width > 2400 || height < 400 || height > 2400) {
+      return;
+    }
     setWindowWidth(Number(width));
     setWindowHeight(Number(height));
 
     const priceForOneMeterSquare = 2235;
+    const priceForSash = 300;
     const windowSizeInMetersSquare =
       (Number(width) / 1000) * (Number(height) / 1000);
-    const result = priceForOneMeterSquare * windowSizeInMetersSquare;
-    if (width < 400 || width > 2400 || height < 400 || height > 2400) {
-      return;
-    }
+    const result =
+      priceForOneMeterSquare * windowSizeInMetersSquare + sashes * priceForSash;
 
     setPrice(result);
-    openModal(true);
+    openPriceModal();
   };
 
   const handleBlur = (e) => {
@@ -90,15 +102,36 @@ const Calculator = ({ setWindowWidth, setWindowHeight, windowType }) => {
         <PrimaryBtn innerText='Цена' />
       </form>
 
-      {modal && <PriceModal onOpenModal={openModal} price={price} />}
+      <CSSTransition
+        in={priceModal}
+        timeout={300}
+        classNames={animations}
+        unmountOnExit
+      >
+        <PriceModal price={price} />
+      </CSSTransition>
+
+      <CSSTransition
+        in={formResponseModal}
+        timeout={300}
+        classNames={animations}
+        unmountOnExit
+      >
+        <ResponseModal />
+      </CSSTransition>
     </main>
   );
 };
 
-const mapStateToProps = ({ windowType }) => ({
-  windowType,
+const mapStateToProps = ({ window, modal }) => ({
+  windowType: window.windowType,
+  sashes: window.sashes,
+  priceModal: modal.priceModalOpen,
+  formResponseModal: modal.formResponseModalOpen,
 });
 
-export default connect(mapStateToProps, { setWindowWidth, setWindowHeight })(
-  Calculator
-);
+export default connect(mapStateToProps, {
+  setWindowWidth,
+  setWindowHeight,
+  openPriceModal,
+})(Calculator);

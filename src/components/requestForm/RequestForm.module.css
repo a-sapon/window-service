@@ -26,20 +26,6 @@
   margin-right: 20px;
 }
 
-.closeBtn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  fill: var(--text-color);
-  cursor: pointer;
-  transition: fill 200ms ease-in-out, transform 200ms ease-in-out;
-}
-
-.closeBtn:hover {
-  fill: #000000;
-  transform: scale(1.1);
-}
-
 @media (min-width: 768px) {
   .requestForm {
     flex-direction: row;

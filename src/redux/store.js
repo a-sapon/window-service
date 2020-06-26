@@ -1,5 +1,10 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { windowReducer } from './reducers';
+import { windowReducer, modalReducer } from './reducers';
 
-export const store = createStore(windowReducer, composeWithDevTools());
+const rootReducer = combineReducers({
+  window: windowReducer,
+  modal: modalReducer,
+});
+
+export const store = createStore(rootReducer, composeWithDevTools());

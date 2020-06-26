@@ -12,7 +12,7 @@ const SingleWindowWithKnob = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='SingleWindowWithKnob' className={styles.window}>
+      <div data-type='SingleWindowWithKnob' data-sash='1' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
           width='80'

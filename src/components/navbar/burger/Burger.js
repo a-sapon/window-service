@@ -2,7 +2,7 @@ import React from 'react';
 import { Navmodal } from './Navmodal';
 import { CSSTransition } from 'react-transition-group';
 import styles from './Burger.module.css';
-import animations from '../../../styles/animations.module.css';
+import animations from '../../../styles/burgerAnimation.module.css';
 
 export const Burger = ({ opened }) => (
   <>

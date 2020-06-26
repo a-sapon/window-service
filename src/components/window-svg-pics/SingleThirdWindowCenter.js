@@ -12,7 +12,7 @@ const SingleThirdWindowCenter = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='SingleThirdWindowCenter' className={styles.window}>
+      <div data-type='SingleThirdWindowCenter' data-sash='1' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
           width='140'

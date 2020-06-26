@@ -12,7 +12,7 @@ const HalfTWindow = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='HalfTWindow' className={styles.window}>
+      <div data-type='HalfTWindow' data-sash='1' className={styles.window}>
         <div className={styles.innerWindow} style={{width: '86%'}}></div>
         <svg
           width='70'

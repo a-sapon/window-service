@@ -39,13 +39,33 @@
   margin: 0 auto 20px auto;
 }
 
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  fill: var(--text-color);
+  cursor: pointer;
+  transition: fill 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.closeBtn:hover {
+  fill: #000000;
+  transform: scale(1.1);
+}
+
+.response {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
 @media (min-width: 1200px) {
   .modal {
     max-width: 970px;
     padding: 40px;
   }
 
-  .price {
+  .price, .response {
     font-size: 24px;
   }
 
