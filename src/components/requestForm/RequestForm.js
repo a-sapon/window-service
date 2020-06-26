@@ -3,7 +3,7 @@ import styles from './RequestForm.module.css';
 import PrimaryBtn from '../primaryBtn/PrimaryBtn';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { openResponseModal, closePriceModal } from '../../redux/actionCreators';
+import { openResponseModal, closePriceModal, setResponse } from '../../redux/actionCreators';
 
 const RequestForm = ({
   windowType,
@@ -11,10 +11,10 @@ const RequestForm = ({
   height,
   price,
   openResponseModal,
-  closePriceModal
+  closePriceModal,
+  setResponse
 }) => {
   const [info, setInfo] = useState({ name: '', tel: '' });
-  const [responseMsg, setResponseMsg] = useState('');
 
   const handleChange = (e) => {
     e.persist();
@@ -32,14 +32,15 @@ const RequestForm = ({
     };
 
     try {
-      const response = await axios.post('/telegram', order);
-      const msg = await response.data.message;
-      setResponseMsg(msg);
-      closePriceModal();
-      openResponseModal();
+      // const response = await axios.post('/telegram', order);
+      // setResponse(response.data);
+      setResponse({status: "ok", message: "Успешно отправлено!"});
     } catch (err) {
       console.log(err);
+      setResponse({status: "error", message: "Произошла ошибка! Попробуйте еще раз или перезвоните нам."});
     }
+    closePriceModal();
+    openResponseModal();
   };
 
   return (
@@ -49,9 +50,9 @@ const RequestForm = ({
         onSubmit={handleSubmit}
         autoComplete='off'
         className={styles.requestForm}
-        action='/telegram'
-        method='post'
-        encType='application/x-www-form-urlencoded'
+        // action='/telegram'
+        // method='post'
+        // encType='application/x-www-form-urlencoded'
       >
         <input
           type='text'
@@ -80,6 +81,6 @@ const mapStateToProps = ({ window }) => ({
   price: window.price,
 });
 
-export default connect(mapStateToProps, { openResponseModal, closePriceModal })(
+export default connect(mapStateToProps, { openResponseModal, closePriceModal, setResponse })(
   RequestForm
 );

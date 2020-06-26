@@ -15,7 +15,7 @@ export const Navmodal = () => (
         </a>
       </li>
       <li>
-        <a href='#request' className={styles.modalListItem}>
+        <a href='#request' onClick={() => this.props.openPriceModal()} className={styles.modalListItem}>
           Оставить заявку
         </a>
       </li>

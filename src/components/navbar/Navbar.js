@@ -3,6 +3,8 @@ import { ScreenContext } from '../App';
 import { Burger } from './burger/Burger';
 import styles from './Navbar.module.css';
 import '../App.css';
+import { openPriceModal } from '../../redux/actionCreators';
+import { connect } from 'react-redux';
 
 class Navbar extends Component {
   state = {
@@ -64,7 +66,7 @@ class Navbar extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href='#request' className={styles.navListItem}>
+                    <a href='#request' onClick={() => this.props.openPriceModal()} className={styles.navListItem}>
                       Оставить заявку
                     </a>
                   </li>
@@ -83,4 +85,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default connect(null, { openPriceModal })(Navbar);

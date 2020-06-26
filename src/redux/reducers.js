@@ -5,7 +5,7 @@ const WINDOW_STATE = {
   width: 1400,
   height: 1300,
   sashes: 0, // колличество створок
-  price: 0,
+  price: '4 067,70 грн.',
 };
 
 export const windowReducer = (state = WINDOW_STATE, { type, payload }) => {
@@ -48,6 +48,16 @@ export const modalReducer = (state = MODAL_STATE, { type }) => {
 
     case Type.CLOSE_RESPONSE_MODAL:
       return { ...state, formResponseModalOpen: false };
+
+    default:
+      return state;
+  }
+};
+
+export const responseReducer = (state = '', { type, payload }) => {
+  switch (type) {
+    case Type.SET_RESPONSE:
+      return payload;
 
     default:
       return state;

@@ -26,7 +26,7 @@ const PriceModal = ({ closePriceModal, price, width, height, setPrice }) => {
     <div onClick={closeModal} className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.price}>
-          Приблизительная цена за выбранное окно {width} x {height}:{' '}
+          Приблизительная цена за окно {width} x {height}:{' '}
           <b>{formatedPrice}</b>
         </div>
 

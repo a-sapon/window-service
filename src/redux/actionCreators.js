@@ -40,3 +40,8 @@ export const openResponseModal = () => ({
 export const closeResponseModal = () => ({
   type: Type.CLOSE_RESPONSE_MODAL,
 });
+
+export const setResponse = (response) => ({
+  type: Type.SET_RESPONSE,
+  payload: response,
+});

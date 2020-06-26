@@ -3,7 +3,7 @@ import styles from './PriceModal.module.css';
 import { closeResponseModal } from '../../redux/actionCreators';
 import { connect } from 'react-redux';
 
-const ResponseModal = ({ closeResponseModal }) => {
+const ResponseModal = ({ closeResponseModal, response }) => {
   
 
   const closeModal = (e) => {
@@ -18,7 +18,7 @@ const ResponseModal = ({ closeResponseModal }) => {
   return (
     <div onClick={closeModal} className={styles.overlay}>
       <div className={styles.modal}>
-        <p className={styles.response}>{responseMsg}</p>
+        <p className={response.status === 'ok' ? styles.responseOk : styles.responseError}>{response.message}</p>
 
         <span data-action='close-modal' className={styles.closeBtn}>
           <svg
@@ -38,4 +38,8 @@ const ResponseModal = ({ closeResponseModal }) => {
   );
 };
 
-export default connect(null, { closeResponseModal })(ResponseModal);
+const mapStateToProps = ({ response }) => ({
+  response
+})
+
+export default connect(mapStateToProps, { closeResponseModal })(ResponseModal);

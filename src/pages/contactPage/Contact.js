@@ -21,8 +21,26 @@ export const Contact = () => (
         <li className={styles.contactListItem}>
           <Email />
         </li>
-        <li className={styles.contactListItem}>Telegram</li>
-        <li className={styles.contactListItem}>Viber</li>
+        <li className={styles.contactListItem}>
+          <a
+            href='https://t.me/onesaponatime'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={styles.telegram}
+          >
+            Telegram
+          </a>
+        </li>
+        <li className={styles.contactListItem}>
+          <a
+            href='viber://chat/?number=%2380939169657'
+            target='_blank'
+            rel='noopener noreferrer'
+            className={styles.viber}
+          >
+            Viber
+          </a>
+        </li>
       </ul>
     </div>
   </div>
