@@ -4,10 +4,12 @@ import Doors from './windowPicsSection/Doors';
 import Balconies from './windowPicsSection/Balconies';
 import BalconyDoors from './windowPicsSection/BalconyDoors';
 import styles from './windowTypesSection.module.css';
+import { selectWindowType, setSashesNumber } from '../../redux/actionCreators';
+import { connect } from 'react-redux';
 
-const WindowTypesSection = () => {
-  const [windows, openWindows] = useState(true);
-  const [doors, openDoors] = useState(false);
+const WindowTypesSection = ({ selectWindowType, setSashesNumber }) => {
+  const [windows, openWindows] = useState(false);
+  const [doors, openDoors] = useState(true);
   const [balconies, openBalconies] = useState(false);
   const [balconyDoors, openBalconyDoors] = useState(false);
 
@@ -40,6 +42,18 @@ const WindowTypesSection = () => {
       default:
         return;
     }
+  };
+
+  const selectWindow = (e) => {
+    const selected = document.querySelector(`.${styles.selected}`);
+    const clickedWindow = e.currentTarget.children[0];
+    if (selected) {
+      selected.classList.remove(styles.selected);
+    }
+
+    clickedWindow.classList.add(styles.selected);
+    selectWindowType(clickedWindow.dataset.type);
+    setSashesNumber(clickedWindow.dataset.sash);
   };
 
   return (
@@ -88,13 +102,15 @@ const WindowTypesSection = () => {
       </ul>
 
       <div>
-        {windows && <Windows />}
-        {doors && <Doors />}
-        {balconies && <Balconies />}
-        {balconyDoors && <BalconyDoors />}
+        {windows && <Windows handleClick={selectWindow} />}
+        {doors && <Doors handleClick={selectWindow} />}
+        {balconies && <Balconies handleClick={selectWindow} />}
+        {balconyDoors && <BalconyDoors handleClick={selectWindow} />}
       </div>
     </div>
   );
 };
 
-export default WindowTypesSection;
+export default connect(null, { selectWindowType, setSashesNumber })(
+  WindowTypesSection
+);

@@ -6,12 +6,11 @@ const DoubleHalfWindow = ({ onHandleClick }) => (
     <div data-type='DoubleHalfWindow' data-sash='2' className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
-      width='120'
-      height='120'
+        width='120'
+        height='120'
         viewBox='0 0 1200 1200'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
-        
       >
         <g>
           <polygon
