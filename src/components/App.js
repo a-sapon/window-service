@@ -3,6 +3,8 @@ import './App.css';
 import { Home } from '../pages/homePage/Home';
 import { Contact } from '../pages/contactPage/Contact';
 import Calculator from '../pages/calculator/Calculator';
+import { Footer } from './footer/Footer';
+import CallButton from './callButton/CallButton';
 
 export const ScreenContext = createContext();
 
@@ -22,7 +24,8 @@ export const App = () => {
       <Home />
       <Calculator />
       <Contact />
-      <div className='App'></div>
+      <Footer />
+      <CallButton />
     </ScreenContext.Provider>
   );
 };

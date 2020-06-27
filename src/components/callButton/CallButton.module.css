@@ -1,0 +1,94 @@
+@import '../../styles/vars.css';
+
+.callBtnWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--dark-blue);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  transform: perspective(1px) translateZ(0);
+}
+
+.callBtn {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  fill-rule: evenodd;
+}
+
+.callBackWindow {
+  text-align: center;
+  max-width: 360px;
+  padding: 30px 36px 40px 36px;
+  border-radius: 6px;
+  max-height: 65vh;
+  position: fixed;
+  right: 54px;
+  bottom: 80px;
+  background-color: var(--border-color);
+}
+
+.callBackWindow form {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.callBackWindow form [name='name'], .callBackWindow form input {
+  margin-right: 0;
+  width: 100%;
+}
+
+.callBackText {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.callBtnWrapper:hover,
+.callBtnWrapper:focus,
+.callBtnWrapper:active {
+  animation-name: hvr-pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hvr-pulse {
+  25% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+}
+
+@media (min-width: 768px) {
+  .callBtnWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .callBtn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .callBtnWrapper {
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .callBackWindow {
+    right: 160px;
+    bottom: 120px;
+  }
+}

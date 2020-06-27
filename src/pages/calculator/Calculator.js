@@ -6,6 +6,7 @@ import {
   setWindowWidth,
   setWindowHeight,
   openPriceModal,
+  setPrice,
 } from '../../redux/actionCreators';
 import { connect } from 'react-redux';
 import PriceModal from '../../components/priceModal/PriceModal';
@@ -21,10 +22,10 @@ const Calculator = ({
   priceModal,
   openPriceModal,
   formResponseModal,
+  setPrice
 }) => {
   const [width, setWidth] = useState(1400);
   const [height, setHeight] = useState(1300);
-  const [price, setPrice] = useState(0);
 
   const handleWidth = (e) => {
     setWidth(e.target.value);
@@ -48,8 +49,12 @@ const Calculator = ({
       (Number(width) / 1000) * (Number(height) / 1000);
     const result =
       priceForOneMeterSquare * windowSizeInMetersSquare + sashes * priceForSash;
+    const formatedPrice = new Intl.NumberFormat('uk-UK', {
+        style: 'currency',
+        currency: 'UAH',
+      }).format(result);
 
-    setPrice(result);
+    setPrice(formatedPrice);
     openPriceModal();
   };
 
@@ -108,7 +113,7 @@ const Calculator = ({
         classNames={animations}
         unmountOnExit
       >
-        <PriceModal price={price} />
+        <PriceModal />
       </CSSTransition>
 
       <CSSTransition
@@ -134,4 +139,5 @@ export default connect(mapStateToProps, {
   setWindowWidth,
   setWindowHeight,
   openPriceModal,
+  setPrice
 })(Calculator);

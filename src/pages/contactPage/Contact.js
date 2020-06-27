@@ -16,10 +16,10 @@ export const Contact = () => (
           <Location />
         </li>
         <li className={styles.contactListItem}>
-          <Phone />
-        </li>
-        <li className={styles.contactListItem}>
-          <Email />
+          <div className={styles.emailWrapper}>
+            <Phone />
+            <Email />
+          </div>
         </li>
         <li className={styles.contactListItem}>
           <a

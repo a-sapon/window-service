@@ -34,21 +34,35 @@
   padding-bottom: 36px;
 }
 
-.contactListItem {
+.contactListItem,
+.phone {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   color: var(--text-color);
 }
+.email {
+  display: flex;
+  align-items: center;
+}
 .contactListItem:last-child {
   margin-bottom: 0;
 }
 
+.locationIcon,
 .contactIcon {
-  width: 30px;
-  height: 30px;
   fill: var(--dark-blue);
   margin-right: 20px;
+}
+
+.locationIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.contactIcon {
+  width: 20px;
+  height: 20px;
 }
 
 .locationLink {
@@ -62,12 +76,14 @@
   color: var(--dark-blue);
 }
 
-.telegram, .viber {
+.telegram,
+.viber {
   display: flex;
   line-height: 30px;
 }
 
-.telegram::before, .viber::before {
+.telegram::before,
+.viber::before {
   content: '';
   display: block;
   width: 30px;
@@ -103,23 +119,26 @@
 
   .contactListItem {
     flex-direction: column;
+    justify-content: center;
     margin-bottom: 0;
   }
 
-  .contactIcon {
+  .locationIcon {
     width: 40px;
     height: 40px;
     margin: 0 0 20px 0;
   }
 
-  .telegram, .viber {
+  .telegram,
+  .viber {
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: normal;
-  }  
+  }
 
-  .telegram::before, .viber::before {
+  .telegram::before,
+  .viber::before {
     width: 40px;
     height: 40px;
     margin: 0 0 20px 0;
@@ -133,16 +152,16 @@
 @media (min-width: 1200px) {
   .contactList {
     font-size: 16px;
+    justify-content: space-around;
   }
 }
 
 @media (min-width: 1900px) {
   .contactTitle {
-    padding-top: 140px;
+    padding-top: 60px;
   }
 
   .contactList {
-    font-size: 16px;
-    padding-bottom: 140px;
+    padding-bottom: 100px;
   }
 }

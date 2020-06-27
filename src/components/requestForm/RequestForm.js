@@ -3,7 +3,11 @@ import styles from './RequestForm.module.css';
 import PrimaryBtn from '../primaryBtn/PrimaryBtn';
 import { connect } from 'react-redux';
 import axios from 'axios';
-import { openResponseModal, closePriceModal, setResponse } from '../../redux/actionCreators';
+import {
+  openResponseModal,
+  closePriceModal,
+  setResponse,
+} from '../../redux/actionCreators';
 
 const RequestForm = ({
   windowType,
@@ -12,7 +16,7 @@ const RequestForm = ({
   price,
   openResponseModal,
   closePriceModal,
-  setResponse
+  setResponse,
 }) => {
   const [info, setInfo] = useState({ name: '', tel: '' });
 
@@ -32,12 +36,17 @@ const RequestForm = ({
     };
 
     try {
-      // const response = await axios.post('/telegram', order);
-      // setResponse(response.data);
-      setResponse({status: "ok", message: "Успешно отправлено!"});
+      const response = await axios.post(
+        'https://window-service.herokuapp.com/telegram',
+        order
+      );
+      setResponse(response.data);
     } catch (err) {
       console.log(err);
-      setResponse({status: "error", message: "Произошла ошибка! Попробуйте еще раз или перезвоните нам."});
+      setResponse({
+        status: 'error',
+        message: 'Произошла ошибка! Попробуйте еще раз или перезвоните нам.',
+      });
     }
     closePriceModal();
     openResponseModal();
@@ -45,14 +54,10 @@ const RequestForm = ({
 
   return (
     <>
-      <h3 className={styles.requestFormTitle}>Оставить заявку</h3>
       <form
         onSubmit={handleSubmit}
         autoComplete='off'
         className={styles.requestForm}
-        // action='/telegram'
-        // method='post'
-        // encType='application/x-www-form-urlencoded'
       >
         <input
           type='text'
@@ -81,6 +86,8 @@ const mapStateToProps = ({ window }) => ({
   price: window.price,
 });
 
-export default connect(mapStateToProps, { openResponseModal, closePriceModal, setResponse })(
-  RequestForm
-);
+export default connect(mapStateToProps, {
+  openResponseModal,
+  closePriceModal,
+  setResponse,
+})(RequestForm);

@@ -1,9 +1,5 @@
 @import '../../styles/vars.css';
 
-.requestFormTitle {
-  font-size: 16px;
-}
-
 .requestForm {
   width: 100%;
   display: flex;
@@ -35,10 +31,6 @@
 }
 
 @media (min-width: 1200px) {
-  .requestFormTitle {
-    font-size: 22px;
-  }
-
   .requestForm input {
     font-size: 18px;
   }

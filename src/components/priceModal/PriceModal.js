@@ -3,15 +3,10 @@ import styles from './PriceModal.module.css';
 import { ScreenContext } from '../App';
 import RequestForm from '../requestForm/RequestForm';
 import { connect } from 'react-redux';
-import { setPrice, closePriceModal } from '../../redux/actionCreators';
+import { closePriceModal } from '../../redux/actionCreators';
 
-const PriceModal = ({ closePriceModal, price, width, height, setPrice }) => {
+const PriceModal = ({ closePriceModal, price, width, height }) => {
   const isMobile = useContext(ScreenContext);
-  const formatedPrice = new Intl.NumberFormat('uk-UK', {
-    style: 'currency',
-    currency: 'UAH',
-  }).format(price);
-  setPrice(formatedPrice);
 
   const closeModal = (e) => {
     if (
@@ -26,10 +21,10 @@ const PriceModal = ({ closePriceModal, price, width, height, setPrice }) => {
     <div onClick={closeModal} className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.price}>
-          Приблизительная цена за окно {width} x {height}:{' '}
-          <b>{formatedPrice}</b>
+          Приблизительная цена за окно {width} x {height}: <b>{price}</b>
         </div>
 
+        <h3 className={styles.requestFormTitle}>Оставить заявку</h3>
         {!isMobile && (
           <p className={styles.priceText}>
             С вами свяжется наш замерщик и приедет в удобное время. Мы составим
@@ -58,8 +53,7 @@ const PriceModal = ({ closePriceModal, price, width, height, setPrice }) => {
 const mapStateToProps = ({ window }) => ({
   width: window.width,
   height: window.height,
+  price: window.price,
 });
 
-export default connect(mapStateToProps, { setPrice, closePriceModal })(
-  PriceModal
-);
+export default connect(mapStateToProps, { closePriceModal })(PriceModal);

@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Burger.module.css';
+import { openPriceModal } from '../../../redux/actionCreators';
+import { connect } from 'react-redux';
 
-export const Navmodal = () => (
+const Navmodal = ({ openPriceModal }) => (
   <div className={styles.modalWrapper}>
     <ul className={styles.modalList}>
       <li>
@@ -15,7 +17,11 @@ export const Navmodal = () => (
         </a>
       </li>
       <li>
-        <a href='#request' onClick={() => this.props.openPriceModal()} className={styles.modalListItem}>
+        <a
+          href='#request'
+          onClick={() => openPriceModal()}
+          className={styles.modalListItem}
+        >
           Оставить заявку
         </a>
       </li>
@@ -27,3 +33,5 @@ export const Navmodal = () => (
     </ul>
   </div>
 );
+
+export default connect(null, { openPriceModal })(Navmodal);

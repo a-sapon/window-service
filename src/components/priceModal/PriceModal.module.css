@@ -33,6 +33,10 @@
   font-size: 17px;
 }
 
+.requestFormTitle {
+  font-size: 16px;
+}
+
 .priceText {
   max-width: 70%;
   text-align: center;
@@ -85,6 +89,10 @@
 
   .price, .responseOk, .responseError {
     font-size: 24px;
+  }
+
+  .requestFormTitle {
+    font-size: 22px;
   }
 
   .priceText {

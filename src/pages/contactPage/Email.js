@@ -3,7 +3,7 @@ import styles from './Contact.module.css';
 
 export const Email = () => {
   return (
-    <>
+    <div className={styles.email}>
       <svg viewBox='0 0 512 512' className={styles.contactIcon}>
         <g>
           <g>
@@ -27,6 +27,6 @@ export const Email = () => {
         <g></g>
       </svg>
       <div className={styles.email}>info@window-service.com.ua</div>
-    </>
+    </div>
   );
 };
