@@ -1,31 +1,34 @@
 import React, { useState } from 'react';
-import styles from './window-svg.module.css';
+import styles from '../svg-windows/window-svg.module.css';
 
-const HalfTWindow = ({ onHandleClick }) => {
-  const [value, setValue] = useState('left-6');
+const RegularBalconyDoor = ({ onHandleClick }) => {
+  const [value, setValue] = useState('left-12');
 
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  const flip = value === 'left-6' ? false : true;
+  const flip = value === 'left-12' ? false : true;
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='HalfTWindow' data-sash='1' className={styles.window}>
-        <div className={styles.innerWindow} style={{width: '86%', left: '7%'}}></div>
+      <div
+        data-type='RegularBalconyDoor'
+        data-sash='1'
+        className={styles.window}
+      >
+        <div className={styles.innerWindow} style={{ height: '92%' }}></div>
         <svg
-          width='70'
-          height='120'
-          viewBox='0 0 800 1560'
+          width='90'
+          height='220'
+          viewBox='0 0 800 2000'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
           className={flip ? styles.flipped : 'unflipped'}
-          
         >
           <g>
             <polygon
-              points='0 0 48 48 48 1512 0 1560'
+              points='0 0 48 48 48 1952 0 2000'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -37,50 +40,13 @@ const HalfTWindow = ({ onHandleClick }) => {
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='800 0 752 48 752 1512 800 1560'
+              points='800 0 752 48 752 1952 800 2000'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='0 1560 48 1512 752 1512 800 1560'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-          </g>
-          <rect
-            x='48'
-            y='502'
-            rx='0'
-            ry='0'
-            width='704'
-            height='36'
-            stroke='#0d0d0d'
-            fill='#f2f2f2'
-            strokeWidth='1'
-          ></rect>
-          <g>
-            <polygon
-              points='48 48 68 68 68 482 48 502'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='48 48 68 68 732 68 752 48'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='752 48 732 68 732 482 752 502'
-              stroke='#0d0d0d'
-              fill='#f2f2f2'
-              strokeWidth='1'
-            ></polygon>
-            <polygon
-              points='48 502 68 482 732 482 752 502'
+              points='0 2000 48 1952 752 1952 800 2000'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -88,25 +54,25 @@ const HalfTWindow = ({ onHandleClick }) => {
           </g>
           <g>
             <polygon
-              points='40 530 100 590 100 1460 40 1520'
+              points='40 40 100 100 100 1900 40 1960'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='40 530 100 590 700 590 760 530'
+              points='40 40 100 100 700 100 760 40'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='760 530 700 590 700 1460 760 1520'
+              points='760 40 700 100 700 1900 760 1960'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='40 1520 100 1460 700 1460 760 1520'
+              points='40 1960 100 1900 700 1900 760 1960'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -114,7 +80,7 @@ const HalfTWindow = ({ onHandleClick }) => {
           </g>
           <rect
             x='61'
-            y='995'
+            y='970'
             rx='14'
             ry='14'
             width='28'
@@ -125,7 +91,7 @@ const HalfTWindow = ({ onHandleClick }) => {
           ></rect>
           <rect
             x='65'
-            y='1015'
+            y='990'
             rx='10'
             ry='10'
             width='20'
@@ -136,7 +102,7 @@ const HalfTWindow = ({ onHandleClick }) => {
           ></rect>
           <rect
             x='760'
-            y='530'
+            y='40'
             rx='2'
             ry='2'
             width='15'
@@ -147,7 +113,7 @@ const HalfTWindow = ({ onHandleClick }) => {
           ></rect>
           <rect
             x='760'
-            y='545'
+            y='55'
             rx='2'
             ry='2'
             width='15'
@@ -158,7 +124,7 @@ const HalfTWindow = ({ onHandleClick }) => {
           ></rect>
           <rect
             x='760'
-            y='1505'
+            y='1945'
             rx='2'
             ry='2'
             width='15'
@@ -169,7 +135,7 @@ const HalfTWindow = ({ onHandleClick }) => {
           ></rect>
           <rect
             x='760'
-            y='1390'
+            y='1830'
             rx='2'
             ry='2'
             width='15'
@@ -182,24 +148,24 @@ const HalfTWindow = ({ onHandleClick }) => {
       </div>
 
       <div className={styles.radioBtns}>
-        <label htmlFor='left-6'>
+        <label htmlFor='left-12'>
           <input
             type='radio'
-            id='left-6'
-            name='knob-6'
-            value='left-6'
-            checked={value === 'left-6'}
+            id='left-12'
+            name='knob-12'
+            value='left-12'
+            checked={value === 'left-12'}
             onChange={handleChange}
           ></input>
           Ручка слева
         </label>
-        <label htmlFor='right-6'>
+        <label htmlFor='right-12'>
           <input
             type='radio'
-            id='right-6'
-            name='knob-6'
-            value='right-6'
-            checked={value === 'right-6'}
+            id='right-12'
+            name='knob-12'
+            value='right-12'
+            checked={value === 'right-12'}
             onChange={handleChange}
           ></input>
           Ручка справа
@@ -209,4 +175,4 @@ const HalfTWindow = ({ onHandleClick }) => {
   );
 };
 
-export default HalfTWindow;
+export default RegularBalconyDoor;

@@ -22,7 +22,7 @@ const Calculator = ({
   priceModal,
   openPriceModal,
   formResponseModal,
-  setPrice
+  setPrice,
 }) => {
   const [width, setWidth] = useState(1400);
   const [height, setHeight] = useState(1300);
@@ -37,7 +37,7 @@ const Calculator = ({
 
   const getPriceOnSubmit = (e) => {
     e.preventDefault();
-    if (width < 400 || width > 2400 || height < 400 || height > 2400) {
+    if (width < 300 || width > 4400 || height < 300 || height > 4400) {
       return;
     }
     setWindowWidth(Number(width));
@@ -50,9 +50,9 @@ const Calculator = ({
     const result =
       priceForOneMeterSquare * windowSizeInMetersSquare + sashes * priceForSash;
     const formatedPrice = new Intl.NumberFormat('uk-UK', {
-        style: 'currency',
-        currency: 'UAH',
-      }).format(result);
+      style: 'currency',
+      currency: 'UAH',
+    }).format(result);
 
     setPrice(formatedPrice);
     openPriceModal();
@@ -60,7 +60,7 @@ const Calculator = ({
 
   const handleBlur = (e) => {
     const hint = e.target.closest('label').children[0];
-    if (e.target.value < 400 || e.target.value > 2400) {
+    if (e.target.value < 300 || e.target.value > 4400) {
       e.target.style.border = '1px solid red';
       hint.style.color = 'red';
     } else {
@@ -72,7 +72,7 @@ const Calculator = ({
   return (
     <main className={`container ${styles.calcSection}`}>
       <form onSubmit={getPriceOnSubmit} className={styles.calcForm}>
-        <h2 id='calculator' className={styles.calcTitle}>
+        <h2 className={styles.calcTitle}>
           Расчет стоимости пластиковых окон
         </h2>
         <WindowTypesSection />
@@ -81,7 +81,7 @@ const Calculator = ({
           <h3 className={styles.windowSizeTitle}>Размер окна</h3>
           <div className={styles.windowSizeInputs}>
             <label>
-              Ширина <span className={styles.inputHint}>(400 - 2400 мм)</span>
+              Ширина <span className={styles.inputHint}>(300 - 4400 мм)</span>
               <span className={styles.inputsWrapper}>
                 <input
                   onChange={handleWidth}
@@ -92,7 +92,7 @@ const Calculator = ({
               </span>
             </label>
             <label>
-              Высота <span className={styles.inputHint}>(400 - 2400 мм)</span>
+              Высота <span className={styles.inputHint}>(300 - 4400 мм)</span>
               <span className={styles.inputsWrapper}>
                 <input
                   onChange={handleHeight}
@@ -139,5 +139,5 @@ export default connect(mapStateToProps, {
   setWindowWidth,
   setWindowHeight,
   openPriceModal,
-  setPrice
+  setPrice,
 })(Calculator);

@@ -7,6 +7,8 @@ import {
   openResponseModal,
   closePriceModal,
   setResponse,
+  spinnerON,
+  spinnerOFF,
 } from '../../redux/actionCreators';
 
 const RequestForm = ({
@@ -17,6 +19,8 @@ const RequestForm = ({
   openResponseModal,
   closePriceModal,
   setResponse,
+  spinnerON,
+  spinnerOFF
 }) => {
   const [info, setInfo] = useState({ name: '', tel: '' });
 
@@ -27,6 +31,7 @@ const RequestForm = ({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    spinnerON();
     const order = {
       ...info,
       windowType,
@@ -41,12 +46,14 @@ const RequestForm = ({
         order
       );
       setResponse(response.data);
+      spinnerOFF();
     } catch (err) {
       console.log(err);
       setResponse({
         status: 'error',
         message: 'Произошла ошибка! Попробуйте еще раз или перезвоните нам.',
       });
+      spinnerOFF();
     }
     closePriceModal();
     openResponseModal();
@@ -90,4 +97,6 @@ export default connect(mapStateToProps, {
   openResponseModal,
   closePriceModal,
   setResponse,
+  spinnerON,
+  spinnerOFF
 })(RequestForm);

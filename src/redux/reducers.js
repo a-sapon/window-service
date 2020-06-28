@@ -63,3 +63,16 @@ export const responseReducer = (state = '', { type, payload }) => {
       return state;
   }
 };
+
+export const spinnerReducer = (state = false, { type }) => {
+  switch (type) {
+    case Type.SPINNER_ON:
+      return true;
+
+    case Type.SPINNER_OFF:
+      return false;
+
+    default:
+      return state;
+  }
+};

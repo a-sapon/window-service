@@ -2,8 +2,7 @@
 
 .burgerIcon,
 .closeIcon {
-  width: 26px;
-  height: 26px;
+  width: 30px;
   cursor: pointer;
   position: relative;
   z-index: 1;

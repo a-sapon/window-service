@@ -8,8 +8,8 @@ import { selectWindowType, setSashesNumber } from '../../redux/actionCreators';
 import { connect } from 'react-redux';
 
 const WindowTypesSection = ({ selectWindowType, setSashesNumber }) => {
-  const [windows, openWindows] = useState(false);
-  const [doors, openDoors] = useState(true);
+  const [windows, openWindows] = useState(true);
+  const [doors, openDoors] = useState(false);
   const [balconies, openBalconies] = useState(false);
   const [balconyDoors, openBalconyDoors] = useState(false);
 

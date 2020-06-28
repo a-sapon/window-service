@@ -35,6 +35,10 @@
   background-color: var(--border-color);
 }
 
+.callBackWindow h3 {
+  margin-bottom: 20px;
+}
+
 .callBackWindow form {
   flex-direction: column;
   align-items: center;

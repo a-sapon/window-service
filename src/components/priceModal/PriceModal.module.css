@@ -33,8 +33,10 @@
   font-size: 17px;
 }
 
-.requestFormTitle {
-  font-size: 16px;
+.price div {
+  font-weight: 800;
+  padding-top: 10px;
+  color: var(--dark-blue);
 }
 
 .priceText {
@@ -89,10 +91,6 @@
 
   .price, .responseOk, .responseError {
     font-size: 24px;
-  }
-
-  .requestFormTitle {
-    font-size: 22px;
   }
 
   .priceText {

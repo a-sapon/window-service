@@ -1,18 +1,24 @@
 import React from 'react';
+import SingleDoor from '../../svg-doors/SingleDoor';
+import DoubleDoor from '../../svg-doors/DoubleDoor';
+import SingleTDoor from '../../svg-doors/SingleTDoor';
+import DoubleTDoor from '../../svg-doors/DoubleTDoor';
 import styles from './windowPicsSection.module.css';
-import RegularDoor from '../../svg-doors/RegularDoor';
-import HalfDoor from '../../svg-doors/HalfDoor';
 
 const Doors = ({ handleClick }) => (
   <ul className={styles.productsList}>
-    <li className={styles.productsListItem}>
-      <RegularDoor onHandleClick={handleClick} />
+    <li className={styles.DoorsListItem}>
+      <SingleDoor onHandleClick={handleClick} />
     </li>
-    <li className={styles.productsListItem}>
-      <HalfDoor onHandleClick={handleClick} />
+    <li className={styles.DoorsListItem}>
+      <DoubleDoor onHandleClick={handleClick} />
     </li>
-    <li className={styles.productsListItem}></li>
-    <li className={styles.productsListItem}></li>
+    <li className={styles.DoorsListItem}>
+      <SingleTDoor onHandleClick={handleClick} />
+    </li>
+    <li className={styles.DoorsListItem}>
+      <DoubleTDoor onHandleClick={handleClick} />
+    </li>
   </ul>
 );
 

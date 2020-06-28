@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import styles from '../svg-windows/window-svg.module.css';
 
-const RegularDoor = ({ onHandleClick }) => {
-  const [value, setValue] = useState('left-8');
+const DoubleDoor = ({ onHandleClick }) => {
+  const [value, setValue] = useState('left-9');
 
   const handleChange = (e) => {
     setValue(e.target.value);
   };
 
-  const flip = value === 'left-8' ? false : true;
+  const flip = value === 'left-9' ? false : true;
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='RegularDoor' data-sash='1' className={styles.window}>
-        <div className={styles.innerWindow}></div>
+      <div data-type='DoubleDoor' data-sash='2' className={styles.window}>
+        <div
+          className={styles.innerWindow}
+          style={{ height: '94%', top: '2%' }}
+        ></div>
         <svg
-          width='100'
+          width='140'
           height='220'
-          viewBox='0 0 900 2100'
+          viewBox='0 0 1300 2100'
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
           className={flip ? styles.flipped : 'unflipped'}
@@ -30,19 +33,19 @@ const RegularDoor = ({ onHandleClick }) => {
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='0 0 48 48 852 48 900 0'
+              points='0 0 48 48 1252 48 1300 0'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='900 0 852 48 852 2052 900 2100'
+              points='1300 0 1252 48 1252 2052 1300 2100'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='0 2100 48 2052 852 2052 900 2100'
+              points='0 2100 48 2052 1252 2052 1300 2100'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
@@ -50,32 +53,32 @@ const RegularDoor = ({ onHandleClick }) => {
           </g>
           <g>
             <polygon
-              points='40 40 150 150 150 1950 40 2060'
+              points='441.33333333333 40 551.33333333333 150 551.33333333333 1950 441.33333333333 2060'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='40 40 150 150 750 150 860 40'
+              points='441.33333333333 40 551.33333333333 150 1148 150 1258 40'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='860 40 750 150 750 1950 860 2060'
+              points='1258 40 1148 150 1148 1950 1258 2060'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
             <polygon
-              points='40 2060 150 1950 750 1950 860 2060'
+              points='441.33333333333 2060 551.33333333333 1950 1148 1950 1258 2060'
               stroke='#0d0d0d'
               fill='#f2f2f2'
               strokeWidth='1'
             ></polygon>
           </g>
           <rect
-            x='865'
+            x='1263'
             y='190'
             rx='4'
             ry='4'
@@ -86,7 +89,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='784'
+            x='1182'
             y='190'
             rx='4'
             ry='4'
@@ -97,7 +100,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='865'
+            x='1263'
             y='990'
             rx='4'
             ry='4'
@@ -108,7 +111,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='784'
+            x='1182'
             y='990'
             rx='4'
             ry='4'
@@ -119,7 +122,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='865'
+            x='1263'
             y='1790'
             rx='4'
             ry='4'
@@ -130,7 +133,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='784'
+            x='1182'
             y='1790'
             rx='4'
             ry='4'
@@ -141,7 +144,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='52.5'
+            x='453.83333333333'
             y='965'
             rx='10'
             ry='10'
@@ -152,7 +155,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='65'
+            x='466.33333333333'
             y='990'
             rx='10'
             ry='10'
@@ -163,7 +166,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='70'
+            x='471.33333333333'
             y='1065'
             rx='5'
             ry='5'
@@ -174,7 +177,7 @@ const RegularDoor = ({ onHandleClick }) => {
             strokeWidth='1'
           ></rect>
           <rect
-            x='66'
+            x='467.33333333333'
             y='1065'
             rx='9'
             ry='9'
@@ -188,24 +191,24 @@ const RegularDoor = ({ onHandleClick }) => {
       </div>
 
       <div className={styles.radioBtns}>
-        <label htmlFor='left-8'>
+        <label htmlFor='left-9'>
           <input
             type='radio'
-            id='left-8'
-            name='knob-8'
-            value='left-8'
-            checked={value === 'left-8'}
+            id='left-9'
+            name='knob-9'
+            value='left-9'
+            checked={value === 'left-9'}
             onChange={handleChange}
           ></input>
           Ручка слева
         </label>
-        <label htmlFor='right-8'>
+        <label htmlFor='right-9'>
           <input
             type='radio'
-            id='right-8'
-            name='knob-8'
-            value='right-8'
-            checked={value === 'right-8'}
+            id='right-9'
+            name='knob-9'
+            value='right-9'
+            checked={value === 'right-9'}
             onChange={handleChange}
           ></input>
           Ручка справа
@@ -215,4 +218,4 @@ const RegularDoor = ({ onHandleClick }) => {
   );
 };
 
-export default RegularDoor;
+export default DoubleDoor;

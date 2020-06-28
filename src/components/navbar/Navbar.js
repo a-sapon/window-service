@@ -51,7 +51,9 @@ class Navbar extends Component {
               onClick={this.handleClick}
             >
               <a href='#home' className={styles.logo}>
-                Окна на заказ
+                <div>Window
+                  <div className={styles.logoText}>Service</div>
+                </div>
               </a>
               {isMobile ? (
                 <Burger opened={opened} />

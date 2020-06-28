@@ -11,21 +11,6 @@
   transition: all 600ms ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .navWrapper,
-  .navWrapperTop {
-    font-size: 14px;
-    line-height: normal;
-  }
-}
-
-@media (min-width: 1200px) {
-  .navWrapper,
-  .navWrapperTop {
-    font-size: 17px;
-  }
-}
-
 .navWrapper {
   height: 50px;
   background-color: #ffffff;
@@ -61,7 +46,38 @@
 }
 
 .logo {
-  font-family: 'Montserrat', cursive;
   font-weight: 600;
   color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+
+.logoText {
+  margin-left: 20px;
+}
+
+.logo::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url(../../images/logo.png);
+  background-size: cover;
+  margin-right: -14px;
+}
+
+@media (min-width: 768px) {
+  .navWrapper,
+  .navWrapperTop {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navWrapper,
+  .navWrapperTop {
+    font-size: 17px;
+  }
 }

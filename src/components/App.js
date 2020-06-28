@@ -5,10 +5,12 @@ import { Contact } from '../pages/contactPage/Contact';
 import Calculator from '../pages/calculator/Calculator';
 import { Footer } from './footer/Footer';
 import CallButton from './callButton/CallButton';
+import Spinner from './spinner/Spinner';
+import { connect } from 'react-redux';
 
 export const ScreenContext = createContext();
 
-export const App = () => {
+const App = ({ spinner }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -26,6 +28,13 @@ export const App = () => {
       <Contact />
       <Footer />
       <CallButton />
+      {spinner && <Spinner />}
     </ScreenContext.Provider>
   );
 };
+
+const mapStateToProps = ({ spinner }) => ({
+  spinner,
+});
+
+export default connect(mapStateToProps)(App);

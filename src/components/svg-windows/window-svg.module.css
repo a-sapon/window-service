@@ -15,8 +15,8 @@
   width: 90%;
   height: 89%;
   position: absolute;
-  top: 3%;
-  left: 6%;
+  top: 4%;
+  left: 5%;
   overflow: hidden;
   background-color: #99ccff;
   z-index: -1;
@@ -31,7 +31,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  transform-origin: 80% -45%;
+  transform-origin: 92% -45%;
   transform: rotate(20deg);
 }
 

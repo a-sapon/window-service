@@ -45,3 +45,11 @@ export const setResponse = (response) => ({
   type: Type.SET_RESPONSE,
   payload: response,
 });
+
+export const spinnerON = () => ({
+  type: Type.SPINNER_ON,
+});
+
+export const spinnerOFF = () => ({
+  type: Type.SPINNER_OFF,
+});

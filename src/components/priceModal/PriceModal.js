@@ -21,10 +21,9 @@ const PriceModal = ({ closePriceModal, price, width, height }) => {
     <div onClick={closeModal} className={styles.overlay}>
       <div className={styles.modal}>
         <div className={styles.price}>
-          Приблизительная цена за окно {width} x {height}: <b>{price}</b>
+          Приблизительная цена за окно {width} x {height}: <div>{price}</div>
         </div>
 
-        <h3 className={styles.requestFormTitle}>Оставить заявку</h3>
         {!isMobile && (
           <p className={styles.priceText}>
             С вами свяжется наш замерщик и приедет в удобное время. Мы составим
