@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bad0d8f749e8c7eb3c74602e5cd0aa6",
+    "revision": "33604797792db2d737e0479a3508dc57",
     "url": "/bud/index.html"
   },
   {
-    "revision": "16a7be98620d87b7725b",
-    "url": "/bud/static/css/main.4d2a8d7f.chunk.css"
+    "revision": "bfe358889fee51352cbc",
+    "url": "/bud/static/css/main.e4be687f.chunk.css"
   },
   {
     "revision": "9586805626dfa64597f9",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bud/static/js/2.13998d0b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "16a7be98620d87b7725b",
+    "revision": "bfe358889fee51352cbc",
     "url": "/bud/static/js/main.e42332f7.chunk.js"
   },
   {
@@ -24,20 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bud/static/js/runtime-main.0e045e52.js"
   },
   {
-    "revision": "58e664c3b316facf56e8f0284adb70c5",
-    "url": "/bud/static/media/background.58e664c3.jpg"
-  },
-  {
-    "revision": "41e8a965aec5e792358b08ce886c0362",
-    "url": "/bud/static/media/checkmark.41e8a965.png"
-  },
-  {
-    "revision": "55368f3723cc31a8dec1ab5973d235bc",
-    "url": "/bud/static/media/cross.55368f37.png"
-  },
-  {
-    "revision": "6f1130be9e948fca514129cf6b742c0d",
-    "url": "/bud/static/media/logo.6f1130be.png"
+    "revision": "1bdbf48b814c581522c92a7e07c07f6f",
+    "url": "/bud/static/media/background.1bdbf48b.jpg"
   },
   {
     "revision": "6fb1b5623e528e27c18658fecf5ee0ee",

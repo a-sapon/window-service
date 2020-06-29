@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bud/static/css/main.4d2a8d7f.chunk.css",
+    "main.css": "/bud/static/css/main.e4be687f.chunk.css",
     "main.js": "/bud/static/js/main.e42332f7.chunk.js",
     "main.js.map": "/bud/static/js/main.e42332f7.chunk.js.map",
     "runtime-main.js": "/bud/static/js/runtime-main.0e045e52.js",
@@ -8,20 +8,18 @@
     "static/js/2.13998d0b.chunk.js": "/bud/static/js/2.13998d0b.chunk.js",
     "static/js/2.13998d0b.chunk.js.map": "/bud/static/js/2.13998d0b.chunk.js.map",
     "index.html": "/bud/index.html",
-    "precache-manifest.3cd43c86f1e1885ddfcbfbfe1f88dcc8.js": "/bud/precache-manifest.3cd43c86f1e1885ddfcbfbfe1f88dcc8.js",
+    "precache-manifest.0492a74320bfe569da5d913694faf385.js": "/bud/precache-manifest.0492a74320bfe569da5d913694faf385.js",
     "service-worker.js": "/bud/service-worker.js",
-    "static/css/main.4d2a8d7f.chunk.css.map": "/bud/static/css/main.4d2a8d7f.chunk.css.map",
+    "static/css/main.e4be687f.chunk.css.map": "/bud/static/css/main.e4be687f.chunk.css.map",
     "static/js/2.13998d0b.chunk.js.LICENSE.txt": "/bud/static/js/2.13998d0b.chunk.js.LICENSE.txt",
-    "static/media/Home.module.css": "/bud/static/media/background.58e664c3.jpg",
-    "static/media/PriceModal.module.css": "/bud/static/media/cross.55368f37.png",
-    "static/media/Navbar.module.css": "/bud/static/media/logo.6f1130be.png",
+    "static/media/Home.module.css": "/bud/static/media/background.1bdbf48b.jpg",
     "static/media/fonts.css": "/bud/static/media/montserrat-v14-latin-regular.f3fef7e5.svg",
     "static/media/Contact.module.css": "/bud/static/media/viber.05289584.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0e045e52.js",
     "static/js/2.13998d0b.chunk.js",
-    "static/css/main.4d2a8d7f.chunk.css",
+    "static/css/main.e4be687f.chunk.css",
     "static/js/main.e42332f7.chunk.js"
   ]
 }
