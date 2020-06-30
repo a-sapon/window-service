@@ -12,7 +12,7 @@ const HalfBalconyDoor = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='HalfBalconyDoor' data-sash='1' className={styles.window}>
+      <div data-type='Балконная дверь, застекленная только в верхней части' data-sash='1' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
           width='90'

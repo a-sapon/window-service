@@ -12,7 +12,7 @@ const SingleHalfWindow = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='SingleHalfWindow' data-sash='1' className={styles.window}>
+      <div data-type='Двустворчатое окно, открывание с 1 стороны' data-sash='1' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
           width='120'

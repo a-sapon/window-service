@@ -3,7 +3,7 @@ import styles from './window-svg.module.css';
 
 const SingleWindow = ({ onHandleClick }) => (
   <div onClick={onHandleClick} className={styles.windowWrapper}>
-    <div data-type='SingleWindow' data-sash='0' className={styles.window}>
+    <div data-type='Глухое окно' data-sash='0' className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
         width='86'

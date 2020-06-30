@@ -4,7 +4,7 @@ import styles from '../svg-windows/window-svg.module.css';
 const QuadrupleTwoSashWIthKnob = ({ onHandleClick }) => (
   <div onClick={onHandleClick} className={styles.windowWrapper}>
     <div
-      data-type='QuadrupleTwoSashWIthKnob'
+      data-type='Четырехстворчатое балконное окно'
       data-sash='4'
       className={styles.window}
     >

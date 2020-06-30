@@ -13,7 +13,7 @@ const RegularBalconyDoor = ({ onHandleClick }) => {
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
       <div
-        data-type='RegularBalconyDoor'
+        data-type='Балконная дверь, застекленная в пол'
         data-sash='1'
         className={styles.window}
       >

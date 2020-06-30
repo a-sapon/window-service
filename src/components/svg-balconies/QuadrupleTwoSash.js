@@ -3,7 +3,7 @@ import styles from '../svg-windows/window-svg.module.css';
 
 const QuadrupleTwoSash = ({ onHandleClick }) => (
   <div onClick={onHandleClick} className={styles.windowWrapper}>
-    <div data-type='QuadrupleTwoSash' data-sash='4' className={styles.window}>
+    <div data-type='Четырехстворчатое балконное окно' data-sash='4' className={styles.window}>
       <div
         className={styles.innerWindow}
         style={{ left: '2%', width: '98%' }}

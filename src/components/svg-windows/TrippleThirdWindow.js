@@ -12,7 +12,7 @@ const TrippleThirdWindow = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='TrippleThirdWindow' data-sash='3' className={styles.window}>
+      <div data-type='Трехстворчатое окно, открывание каждой створки' data-sash='3' className={styles.window}>
         <div className={styles.innerWindow}></div>
         <svg
           width='140'

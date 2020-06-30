@@ -12,7 +12,7 @@ const DoubleTDoor = ({ onHandleClick }) => {
 
   return (
     <div onClick={onHandleClick} className={styles.windowWrapper}>
-      <div data-type='DoubleTDoor' data-sash='2' className={styles.window}>
+      <div data-type='Двустворчатая Т-образная входная дверь' data-sash='2' className={styles.window}>
         <div
           className={styles.innerWindow}
           style={{ height: '94%', top: '2%' }}

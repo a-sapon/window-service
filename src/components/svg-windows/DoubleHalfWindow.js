@@ -3,7 +3,7 @@ import styles from './window-svg.module.css';
 
 const DoubleHalfWindow = ({ onHandleClick }) => (
   <div onClick={onHandleClick} className={styles.windowWrapper}>
-    <div data-type='DoubleHalfWindow' data-sash='2' className={styles.window}>
+    <div data-type='Двустворчатое окно, открывание с обеих сторон' data-sash='2' className={styles.window}>
       <div className={styles.innerWindow}></div>
       <svg
         width='120'
