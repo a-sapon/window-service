@@ -4,7 +4,7 @@
   justify-content: space-around;
 }
 
-.productsListItem, .BalconyDoorsListItem, .DoorsListItem {
+.productsListItem:not(:last-child), .BalconyDoorsListItem, .DoorsListItem {
   margin: 0 20px 20px 0;
 }
 
@@ -14,7 +14,7 @@
   }
 
   .BalconyDoorsListItem {
-    margin: 0 40px 0 40px;
+    margin: 0 60px 0 0;
   }
 }
 
@@ -24,10 +24,10 @@
   }
 
   .DoorsListItem {
-    margin: 0 40px 0 60px;
+    margin: 0 80px 0 0;
   }
 
   .BalconyDoorsListItem {
-    margin: 0 60px 0 60px;
+    margin: 0 100px 0 0;
   }
 }

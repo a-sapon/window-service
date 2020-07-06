@@ -18,6 +18,11 @@
   height: 100%;
   padding: 10px;
 }
+
+.windowTypeListItem:not(:last-child) {
+  border-right: 1px solid #cccccc;
+}
+
 .windowTypeListItem:hover {
   background-color: var(--light-grey-hover);
 }
@@ -39,6 +44,13 @@
 
   .windowTypeListItem {
     padding: 20px;
+    width: 150px;
+    height: 104px;
+  }
+
+  .windowTypeListItem:not(:last-child) {
+    border-bottom: 1px solid #cccccc;
+    border-right: none;
   }
 }
 
@@ -46,11 +58,12 @@
   .windowTypeList {
     font-size: 17px;
     height: 400px;
-    margin: 0 40px 0 0;
+    margin: 0 90px 0 0;
   }
 
   .windowTypeListItem {
     padding: 30px 20px;
+    width: 190px;
   }
 }
 

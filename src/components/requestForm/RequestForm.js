@@ -63,7 +63,6 @@ const RequestForm = ({
     <>
       <form
         onSubmit={handleSubmit}
-        autoComplete='off'
         className={styles.requestForm}
       >
         <input
@@ -71,10 +70,11 @@ const RequestForm = ({
           name='name'
           value={info.name}
           onChange={handleChange}
-          placeholder='Имя'
+          placeholder='ФИО'
+          autoFocus
         />
         <input
-          type='tel'
+          type='number'
           name='tel'
           value={info.tel}
           onChange={handleChange}

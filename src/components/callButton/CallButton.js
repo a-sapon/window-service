@@ -20,7 +20,7 @@ const CallButton = () => {
       <div onClick={handleClick} className={styles.callBtnWrapper}>
         {!callBackWindow ? (
           <a
-            href={isMobile ? 'tel:+380939169657' : `javascript:void(0)`}
+            href={isMobile ? 'tel:+380939169657' : null}
           >
             <svg
               viewBox='0 0 19.3 20.1'

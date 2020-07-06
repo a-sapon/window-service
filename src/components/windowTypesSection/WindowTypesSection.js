@@ -3,9 +3,9 @@ import Windows from './windowPicsSection/Windows';
 import Doors from './windowPicsSection/Doors';
 import Balconies from './windowPicsSection/Balconies';
 import BalconyDoors from './windowPicsSection/BalconyDoors';
-import styles from './windowTypesSection.module.css';
 import { selectWindowType, setSashesNumber } from '../../redux/actionCreators';
 import { connect } from 'react-redux';
+import styles from './windowTypesSection.module.css';
 
 const WindowTypesSection = ({ selectWindowType, setSashesNumber }) => {
   const [windows, openWindows] = useState(true);
