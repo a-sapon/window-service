@@ -4,6 +4,10 @@ export const menuReducer = (state = false, { type }) => {
   switch (type) {
     case Type.TOGGLE_MENU_ON_MOBILE:
       return !state;
+
+    case Type.CLOSE_MENU_ON_SWIPE:
+      return false;
+
     default:
       return state;
   }

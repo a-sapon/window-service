@@ -7,12 +7,12 @@ import CallButton from './callButton/CallButton';
 import Spinner from './spinner/Spinner';
 import { connect } from 'react-redux';
 import Swipe from 'react-easy-swipe';
-import { toggleMenuOnMobile } from '../redux/actionCreators';
+import { closeManuOnSwipe } from '../redux/actionCreators';
 import './App.css';
 
 export const ScreenContext = createContext();
 
-const App = ({ spinner, toggleMenuOnMobile }) => {
+const App = ({ spinner, closeManuOnSwipe }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -24,12 +24,12 @@ const App = ({ spinner, toggleMenuOnMobile }) => {
   }, []);
 
   const swipeHandler = () => {
-    toggleMenuOnMobile();
+    closeManuOnSwipe();
   };
 
   return (
     <ScreenContext.Provider value={isMobile}>
-      <Swipe onSwipeLeft={swipeHandler} onSwipeRight={swipeHandler}>
+      <Swipe onSwipeRight={swipeHandler}>
         <Home />
         <Calculator />
         <Contact />
@@ -45,4 +45,4 @@ const mapStateToProps = ({ spinner }) => ({
   spinner,
 });
 
-export default connect(mapStateToProps, { toggleMenuOnMobile })(App);
+export default connect(mapStateToProps, { closeManuOnSwipe })(App);

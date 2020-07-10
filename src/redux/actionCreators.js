@@ -4,6 +4,10 @@ export const toggleMenuOnMobile = () => ({
   type: Type.TOGGLE_MENU_ON_MOBILE,
 });
 
+export const closeManuOnSwipe = () => ({
+  type: Type.CLOSE_MENU_ON_SWIPE,
+});
+
 export const selectWindowType = (type) => ({
   type: Type.SELECT_WINDOW_TYPE,
   payload: type,
