@@ -23,7 +23,7 @@ export const Contact = () => (
         </li>
         <li className={styles.contactListItem}>
           <a
-            href='https://t.me/onesaponatime'
+            href='https://t.me/Window_service'
             target='_blank'
             rel='noopener noreferrer'
             className={styles.telegram}
@@ -33,7 +33,7 @@ export const Contact = () => (
         </li>
         <li className={styles.contactListItem}>
           <a
-            href='viber://chat/?number=%2380939169657'
+            href='viber://chat/?number=%2B380939169657'
             target='_blank'
             rel='noopener noreferrer'
             className={styles.viber}
