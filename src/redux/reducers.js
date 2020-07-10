@@ -1,5 +1,14 @@
 import Type from './types';
 
+export const menuReducer = (state = false, { type }) => {
+  switch (type) {
+    case Type.TOGGLE_MENU_ON_MOBILE:
+      return !state;
+    default:
+      return state;
+  }
+};
+
 const WINDOW_STATE = {
   windowType: '',
   width: 1400,

@@ -1,5 +1,9 @@
 import Type from './types';
 
+export const toggleMenuOnMobile = () => ({
+  type: Type.TOGGLE_MENU_ON_MOBILE,
+});
+
 export const selectWindowType = (type) => ({
   type: Type.SELECT_WINDOW_TYPE,
   payload: type,

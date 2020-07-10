@@ -3,11 +3,12 @@ import Navmodal from './Navmodal';
 import { CSSTransition } from 'react-transition-group';
 import styles from './Burger.module.css';
 import animations from '../../../styles/burgerAnimation.module.css';
+import { connect } from 'react-redux';
 
-export const Burger = ({ opened }) => (
+const Burger = ({ open }) => (
   <>
     <div
-      className={opened ? styles.closeIcon : styles.burgerIcon}
+      className={open ? styles.closeIcon : styles.burgerIcon}
       data-icon='burgerIcon'
     >
       <span className={styles.burgerIconLine} data-icon='burgerIcon'></span>
@@ -16,7 +17,7 @@ export const Burger = ({ opened }) => (
     </div>
 
     <CSSTransition
-      in={opened}
+      in={open}
       timeout={300}
       classNames={animations}
       unmountOnExit
@@ -25,3 +26,9 @@ export const Burger = ({ opened }) => (
     </CSSTransition>
   </>
 );
+
+const mapStateToProps = ({ menuOnMobileOpen }) => ({
+  open: menuOnMobileOpen
+});
+
+export default connect(mapStateToProps)(Burger);

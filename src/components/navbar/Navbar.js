@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { ScreenContext } from '../App';
-import { Burger } from './burger/Burger';
+import Burger from './burger/Burger';
 import styles from './Navbar.module.css';
 import '../App.css';
-import { openPriceModal } from '../../redux/actionCreators';
+import { openPriceModal, toggleMenuOnMobile } from '../../redux/actionCreators';
 import { connect } from 'react-redux';
 
 class Navbar extends Component {
   state = {
-    bg: 'navWrapperTop',
-    opened: false,
+    bg: 'navWrapperTop'
   };
 
   componentDidMount() {
@@ -34,14 +33,12 @@ class Navbar extends Component {
 
   handleClick = (e) => {
     if (e.target.dataset.icon === 'burgerIcon') {
-      this.setState({
-        opened: !this.state.opened,
-      });
+      this.props.toggleMenuOnMobile();
     }
   };
 
   render() {
-    const { bg, opened } = this.state;
+    const { bg } = this.state;
     return (
       <ScreenContext.Consumer>
         {(isMobile) => (
@@ -56,7 +53,7 @@ class Navbar extends Component {
                 </div>
               </a>
               {isMobile ? (
-                <Burger opened={opened} />
+                <Burger />
               ) : (
                 <ul className={styles.navList}>
                   <li className={styles.navListItem}>
@@ -87,4 +84,4 @@ class Navbar extends Component {
   }
 }
 
-export default connect(null, { openPriceModal })(Navbar);
+export default connect(null, { toggleMenuOnMobile, openPriceModal })(Navbar);
