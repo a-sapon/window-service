@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/bud/static/css/main.e4be687f.chunk.css",
-    "main.js": "/bud/static/js/main.e42332f7.chunk.js",
-    "main.js.map": "/bud/static/js/main.e42332f7.chunk.js.map",
-    "runtime-main.js": "/bud/static/js/runtime-main.0e045e52.js",
-    "runtime-main.js.map": "/bud/static/js/runtime-main.0e045e52.js.map",
-    "static/js/2.13998d0b.chunk.js": "/bud/static/js/2.13998d0b.chunk.js",
-    "static/js/2.13998d0b.chunk.js.map": "/bud/static/js/2.13998d0b.chunk.js.map",
-    "index.html": "/bud/index.html",
-    "precache-manifest.0492a74320bfe569da5d913694faf385.js": "/bud/precache-manifest.0492a74320bfe569da5d913694faf385.js",
-    "service-worker.js": "/bud/service-worker.js",
-    "static/css/main.e4be687f.chunk.css.map": "/bud/static/css/main.e4be687f.chunk.css.map",
-    "static/js/2.13998d0b.chunk.js.LICENSE.txt": "/bud/static/js/2.13998d0b.chunk.js.LICENSE.txt",
-    "static/media/Home.module.css": "/bud/static/media/background.1bdbf48b.jpg",
-    "static/media/fonts.css": "/bud/static/media/montserrat-v14-latin-regular.f3fef7e5.svg",
-    "static/media/Contact.module.css": "/bud/static/media/viber.05289584.svg"
+    "main.css": "/static/css/main.3de2cf2c.chunk.css",
+    "main.js": "/static/js/main.5d8790d6.chunk.js",
+    "main.js.map": "/static/js/main.5d8790d6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b49a8921.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b49a8921.js.map",
+    "static/js/2.6f7c97a5.chunk.js": "/static/js/2.6f7c97a5.chunk.js",
+    "static/js/2.6f7c97a5.chunk.js.map": "/static/js/2.6f7c97a5.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b63d243d5c20ee2de6031901b643947c.js": "/precache-manifest.b63d243d5c20ee2de6031901b643947c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3de2cf2c.chunk.css.map": "/static/css/main.3de2cf2c.chunk.css.map",
+    "static/js/2.6f7c97a5.chunk.js.LICENSE.txt": "/static/js/2.6f7c97a5.chunk.js.LICENSE.txt",
+    "static/media/Home.module.css": "/static/media/background.1bdbf48b.jpg",
+    "static/media/fonts.css": "/static/media/montserrat-v14-latin-regular.f3fef7e5.svg",
+    "static/media/Contact.module.css": "/static/media/viber.05289584.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0e045e52.js",
-    "static/js/2.13998d0b.chunk.js",
-    "static/css/main.e4be687f.chunk.css",
-    "static/js/main.e42332f7.chunk.js"
+    "static/js/runtime-main.b49a8921.js",
+    "static/js/2.6f7c97a5.chunk.js",
+    "static/css/main.3de2cf2c.chunk.css",
+    "static/js/main.5d8790d6.chunk.js"
   ]
 }
